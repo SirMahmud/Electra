@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Election - {{ election.title }}{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     MANAGE ELECTION PAGE
+     ======================================== -->
+
+<!-- Page Header -->
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="fas fa-cog"></i> Manage Election
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <!-- ========================================
+         LEFT COLUMN: ELECTION DETAILS
+         ======================================== -->
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h5 class="mb-0">{{ election.title }}</h5>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <!-- Description -->
+                <p>{{ election.description }}</p>
+                
+                <!-- Status and Results -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <strong>Status:</strong>
+                            {% if election.status == 'active' %}
+                                <span class="badge bg-success">Active</span>
+                            {% elif election.status == 'upcoming' %}
+                                <span class="badge bg-warning text-dark">Upcoming</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Ended</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <strong>Results:</strong>
+                            {% if election.results_published %}
+                                <span class="badge bg-info">Published</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Not Published</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Dates -->
+                <p><strong>Start:</strong> {{ election.start_date|date:"M d, Y H:i" }}</p>
+                <p><strong>End:</strong> {{ election.end_date|date:"M d, Y H:i" }}</p>
+                <p><strong>Total Votes:</strong> {{ election.get_total_votes }}</p>
+                
+                <hr>
+                
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <a href="{% url 'elections:edit_election' election.id %}" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                    
+                    {% if election.status == 'upcoming' %}
+                        <a href="{% url 'elections:start_election' election.id %}"
+                           class="btn btn-success"
+                           onclick="return confirm('Start this election?')">
+                            <i class="fas fa-play"></i> Start Election
+                        </a>
+                    {% elif election.status == 'active' %}
+                        <a href="{% url 'elections:end_election' election.id %}"
+                           class="btn btn-danger"
+                           onclick="return confirm('End this election?')">
+                            <i class="fas fa-stop"></i> End Election
+                        </a>
+                    {% elif election.status == 'ended' and not election.results_published %}
+                        <a href="{% url 'elections:publish_results' election.id %}"
+                           class="btn btn-info"
+                           onclick="return confirm('Publish results for all users?')">
+                            <i class="fas fa-chart-bar"></i> Publish Results
+                        </a>
+                    {% endif %}
+                    
+                    <a href="{% url 'elections:delete_election' election.id %}" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========================================
+         RIGHT COLUMN: QUICK STATS
+         ======================================== -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Positions:</strong> {{ positions.count }}</p>
+                <p>
+                    <strong>Total Contestants:</strong>
+                    {{ election.contestants.count }}
+                </p>
+                <p><strong>Total Votes:</strong> {{ election.get_total_votes }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================
+     POSITIONS AND CONTESTANTS
+     ======================================== -->
+<div class="row section-spacing">
+    <div class="col-12">
+        <!-- Add Position Button -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2><i class="fas fa-list"></i> Positions & Contestants</h2>
+            <a href="{% url 'contestants:add_position' election.id %}"
+               class="btn btn-success">
+                <i class="fas fa-plus"></i> Add Position
+            </a>
+        </div>
+        
+        {% if positions %}
+            {% for position in positions %}
+            <div class="card mb-4">
+                <!-- Position Header -->
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">
+                            <i class="fas fa-briefcase"></i> {{ position.title }}
+                        </h5>
+                        {% if position.description %}
+                        <small>{{ position.description }}</small>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Position Actions -->
+                    <div class="btn-group btn-group-sm">
+                        <a href="{% url 'contestants:add_contestant' election.id %}?position={{ position.id }}"
+                           class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Add Contestant
+                        </a>
+                        <a href="{% url 'contestants:edit_position' position.id %}"
+                           class="btn btn-warning">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="{% url 'contestants:delete_position' position.id %}"
+                           class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Position Body: Contestants Table -->
+                <div class="card-body">
+                    {% if position.contestants.all %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Name</th>
+                                    <th>Party</th>
+                                    <th>Votes</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for contestant in position.contestants.all %}
+                                <tr>
+                                    <td>{{ contestant.order }}</td>
+                                    <td><strong>{{ contestant.name }}</strong></td>
+                                    <td>{{ contestant.party|default:"-" }}</td>
+                                    <td>{{ contestant.get_vote_count }}</td>
+                                    <td>
+                                        <a href="{% url 'contestants:edit_contestant' contestant.id %}"
+                                           class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="{% url 'contestants:delete_contestant' contestant.id %}"
+                                           class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info mb-0">
+                        No contestants added yet for this position.
+                        <a href="{% url 'contestants:add_contestant' election.id %}">
+                            Add first contestant
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="alert alert-warning">
+            <i class="fas fa-exclamation-circle"></i>
+            No positions created yet.
+            <a href="{% url 'contestants:add_position' election.id %}">
+                Add your first position
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

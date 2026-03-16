@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Position - {{ election.title }}{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     ADD POSITION PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-plus"></i> Add Position to {{ election.title }}
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Position Title -->
+                    <div class="mb-3">
+                        <label for="id_title" class="form-label">Position Title</label>
+                        {{ form.title }}
+                        <small class="form-text text-muted">
+                            e.g., President, Vice President, Secretary
+                        </small>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label for="id_description" class="form-label">
+                            Description (Optional)
+                        </label>
+                        {{ form.description }}
+                    </div>
+                    
+                    <!-- Display Order -->
+                    <div class="mb-3">
+                        <label for="id_order" class="form-label">Display Order</label>
+                        {{ form.order }}
+                        <small class="form-text text-muted">Lower numbers appear first</small>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'elections:manage_election' election.id %}"
+                           class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Add Position
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

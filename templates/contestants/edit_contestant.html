@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Contestant - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     EDIT CONTESTANT PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-edit"></i> Edit Contestant
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <!-- Contestant Name -->
+                    <div class="mb-3">
+                        <label for="id_name" class="form-label">Contestant Name</label>
+                        {{ form.name }}
+                    </div>
+                    
+                    <!-- Party -->
+                    <div class="mb-3">
+                        <label for="id_party" class="form-label">Party</label>
+                        {{ form.party }}
+                    </div>
+                    
+                    <!-- Biography -->
+                    <div class="mb-3">
+                        <label for="id_bio" class="form-label">Biography</label>
+                        {{ form.bio }}
+                    </div>
+                    
+                    <!-- Photo -->
+                    <div class="mb-3">
+                        <label for="id_photo" class="form-label">Photo</label>
+                        {{ form.photo }}
+                        
+                        <!-- Current Photo Preview -->
+                        {% if contestant.photo %}
+                        <div class="mt-2">
+                            <p class="small text-muted mb-1">Current photo:</p>
+                            <img src="{{ contestant.photo.url }}" 
+                                 alt="{{ contestant.name }}" 
+                                 class="contestant-photo">
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Display Order -->
+                    <div class="mb-3">
+                        <label for="id_order" class="form-label">Display Order</label>
+                        {{ form.order }}
+                    </div>
+                    
+                    <!-- Divider -->
+                    <hr>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'elections:manage_election' contestant.election.id %}" 
+                           class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Contestant
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

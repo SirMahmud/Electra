@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     LOGIN PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header text-center">
+                <h4 class="mb-0">
+                    <i class="fas fa-sign-in-alt"></i> Login to Your Account
+                </h4>
+            </div>
+
+            <!-- Card Body -->
+            <div class="card-body p-4">
+                <!-- Login Form -->
+                <form method="post" novalidate>
+                    {% csrf_token %}
+
+                    <!-- Form-wide Errors -->
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <!-- Email Field -->
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label">Email Address</label>
+                        <input type="email" 
+                               name="username" 
+                               id="id_username" 
+                               class="form-control" 
+                               placeholder="Enter your email"
+                               value="{{ form.username.value|default:'' }}"
+                               required>
+                        {% if form.username.errors %}
+                            <div class="text-danger small mt-1">
+                                {{ form.username.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label">Password</label>
+                        <input type="password" 
+                               name="password" 
+                               id="id_password" 
+                               class="form-control" 
+                               placeholder="Enter your password"
+                               required>
+                        {% if form.password.errors %}
+                            <div class="text-danger small mt-1">
+                                {{ form.password.errors }}
+                            </div>
+                        {% endif %}
+
+                        <!-- Forgot Password Link -->
+                        <div class="text-end mt-1">
+                            <a href="{% url 'password_reset' %}" class="small text-muted">
+                                <i class="fas fa-key"></i> Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Divider -->
+                <hr class="my-4">
+
+                <!-- Register Link -->
+                <div class="text-center">
+                    <p class="mb-0">
+                        Don't have an account?
+                        <a href="{% url 'accounts:register' %}">Register here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

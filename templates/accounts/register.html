@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     REGISTRATION PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header text-center">
+                <h4 class="mb-0">
+                    <i class="fas fa-user-plus"></i> Create Your Account
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body p-4">
+                <!-- Registration Form -->
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    
+                    <!-- Form-wide Errors -->
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+                    
+                    <!-- Name Fields Row -->
+                    <div class="row">
+                        <!-- First Name -->
+                        <div class="col-md-6 mb-3">
+                            <label for="id_first_name" class="form-label">First Name</label>
+                            {{ form.first_name }}
+                            {% if form.first_name.errors %}
+                                <div class="text-danger small">{{ form.first_name.errors }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Last Name -->
+                        <div class="col-md-6 mb-3">
+                            <label for="id_last_name" class="form-label">Last Name</label>
+                            {{ form.last_name }}
+                            {% if form.last_name.errors %}
+                                <div class="text-danger small">{{ form.last_name.errors }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="mb-3">
+                        <label for="id_email" class="form-label">Email Address</label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <div class="text-danger small">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Voter ID Field -->
+                    <div class="mb-3">
+                        <label for="id_voter_id" class="form-label">Voter ID</label>
+                        {{ form.voter_id }}
+                        <small class="form-text text-muted">Your unique voter identification number</small>
+                        {% if form.voter_id.errors %}
+                            <div class="text-danger small">{{ form.voter_id.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Password Field -->
+                    <div class="mb-3">
+                        <label for="id_password1" class="form-label">Password</label>
+                        {{ form.password1 }}
+                        <small class="form-text text-muted">Minimum 8 characters</small>
+                        {% if form.password1.errors %}
+                            <div class="text-danger small">{{ form.password1.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Confirm Password Field -->
+                    <div class="mb-3">
+                        <label for="id_password2" class="form-label">Confirm Password</label>
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}
+                            <div class="text-danger small">{{ form.password2.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-user-plus"></i> Register
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Divider -->
+                <hr class="my-4">
+                
+                <!-- Login Link -->
+                <div class="text-center">
+                    <p class="mb-0">
+                        Already have an account? 
+                        <a href="{% url 'accounts:login' %}">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

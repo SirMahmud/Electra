@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Users - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     MANAGE USERS PAGE
+     ======================================== -->
+
+<!-- Page Header -->
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="fas fa-users-cog"></i> Manage Users
+        </h1>
+    </div>
+</div>
+
+<!-- ========================================
+     USERS TABLE
+     ======================================== -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h5 class="mb-0">All Registered Users</h5>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Voter ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user_obj in users %}
+                            <tr>
+                                <!-- Voter ID -->
+                                <td><code>{{ user_obj.voter_id }}</code></td>
+                                
+                                <!-- Full Name -->
+                                <td>{{ user_obj.get_full_name }}</td>
+                                
+                                <!-- Email -->
+                                <td>{{ user_obj.email }}</td>
+                                
+                                <!-- Role Badge -->
+                                <td>
+                                    {% if user_obj.is_super_admin %}
+                                        <span class="badge bg-danger">Super Admin</span>
+                                    {% elif user_obj.is_admin %}
+                                        <span class="badge bg-warning text-dark">Admin</span>
+                                    {% else %}
+                                        <span class="badge bg-primary">Voter</span>
+                                    {% endif %}
+                                </td>
+                                
+                                <!-- Join Date -->
+                                <td>{{ user_obj.date_joined|date:"M d, Y" }}</td>
+                                
+                                <!-- Account Status -->
+                                <td>
+                                    {% if user_obj.is_active %}
+                                        <span class="badge bg-success">Active</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">Inactive</span>
+                                    {% endif %}
+                                </td>
+                                
+                                <!-- Actions -->
+                                <td>
+                                    <a href="{% url 'voters:change_user_role' user_obj.id %}" 
+                                       class="btn btn-sm btn-primary">
+                                        <i class="fas fa-user-tag"></i> Change Role
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+

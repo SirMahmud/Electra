@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Position - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     EDIT POSITION PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-edit"></i> Edit Position
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Position Title -->
+                    <div class="mb-3">
+                        <label for="id_title" class="form-label">Position Title</label>
+                        {{ form.title }}
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label for="id_description" class="form-label">Description</label>
+                        {{ form.description }}
+                    </div>
+                    
+                    <!-- Display Order -->
+                    <div class="mb-3">
+                        <label for="id_order" class="form-label">Display Order</label>
+                        {{ form.order }}
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'elections:manage_election' position.election.id %}"
+                           class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Position
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Voter IDs - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4"><i class="fas fa-id-card"></i> Manage Voter IDs</h1>
+    </div>
+</div>
+
+<!-- Statistics Cards -->
+<div class="row">
+    <div class="col-md-3">
+        <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Total IDs</h6>
+                    <h3>{{ stats.total }}</h3>
+                </div>
+                <i class="fas fa-id-card fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stats-card stats-card-green">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Available</h6>
+                    <h3>{{ stats.available }}</h3>
+                </div>
+                <i class="fas fa-check-circle fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stats-card stats-card-blue">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Used</h6>
+                    <h3>{{ stats.used }}</h3>
+                </div>
+                <i class="fas fa-user-check fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stats-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Blocked</h6>
+                    <h3>{{ stats.blocked }}</h3>
+                </div>
+                <i class="fas fa-ban fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Action Buttons -->
+<div class="row section-spacing">
+    <div class="col-12">
+        <div class="d-flex gap-2 mb-3">
+            <a href="{% url 'accounts:add_voter_id' %}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Add Single ID
+            </a>
+            <a href="{% url 'accounts:bulk_upload_voter_ids' %}" class="btn btn-success">
+                <i class="fas fa-upload"></i> Bulk Upload IDs
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Voter IDs Table -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">All Voter IDs</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Voter ID</th>
+                                <th>Status</th>
+                                <th>Registered By</th>
+                                <th>Registered At</th>
+                                <th>Notes</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entry in voter_ids %}
+                            <tr>
+                                <td><code>{{ entry.voter_id }}</code></td>
+                                <td>
+                                    {% if entry.status == 'available' %}
+                                        <span class="badge bg-success">Available</span>
+                                    {% elif entry.status == 'used' %}
+                                        <span class="badge bg-primary">Used</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Blocked</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if entry.registered_by %}
+                                        {{ entry.registered_by.get_full_name }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if entry.registered_at %}
+                                        {{ entry.registered_at|date:"M d, Y H:i" }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>{{ entry.notes|truncatewords:10|default:"-" }}</td>
+                                <td>
+                                    <a href="{% url 'accounts:edit_voter_id' entry.id %}" 
+                                       class="btn btn-sm btn-warning">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="{% url 'accounts:delete_voter_id' entry.id %}" 
+                                       class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">
+                                    No Voter IDs in the registry yet.
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Bulk Upload Voter IDs - ELECTRA{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0"><i class="fas fa-upload"></i> Bulk Upload Voter IDs</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Instructions:</strong> Enter one Voter ID per line. 
+                    All IDs will be added with "Available" status.
+                </div>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="id_voter_ids" class="form-label">Voter IDs</label>
+                        {{ form.voter_ids }}
+                        {% if form.voter_ids.errors %}
+                            <div class="text-danger small">{{ form.voter_ids.errors }}</div>
+                        {% endif %}
+                        <small class="form-text text-muted">
+                            {{ form.voter_ids.help_text }}
+                        </small>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'accounts:manage_voter_ids' %}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-upload"></i> Upload IDs
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

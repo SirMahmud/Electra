@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Election - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     EDIT ELECTION PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-edit"></i> Edit Election
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Election Title -->
+                    <div class="mb-3">
+                        <label for="id_title" class="form-label">Election Title</label>
+                        {{ form.title }}
+                    </div>
+                    
+                    <!-- Election Description -->
+                    <div class="mb-3">
+                        <label for="id_description" class="form-label">Description</label>
+                        {{ form.description }}
+                    </div>
+                    
+                    <!-- Date Fields Row -->
+                    <div class="row">
+                        <!-- Start Date -->
+                        <div class="col-md-6 mb-3">
+                            <label for="id_start_date" class="form-label">Start Date & Time</label>
+                            {{ form.start_date }}
+                        </div>
+                        
+                        <!-- End Date -->
+                        <div class="col-md-6 mb-3">
+                            <label for="id_end_date" class="form-label">End Date & Time</label>
+                            {{ form.end_date }}
+                        </div>
+                    </div>
+                    
+                    <!-- Status Selection -->
+                    <div class="mb-3">
+                        <label for="id_status" class="form-label">Status</label>
+                        {{ form.status }}
+                    </div>
+                    
+                    <!-- Divider -->
+                    <hr>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'elections:manage_election' election.id %}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Election
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

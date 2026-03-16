@@ -1,0 +1,379 @@
+{% extends 'base.html' %}
+
+{% block title %}Vote - {{ election.title }}{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     VOTING PAGE - POSITION BASED - ENHANCED
+     ======================================== -->
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Election Hero Header -->
+            <div class="bg-primary bg-opacity-10 rounded-4 p-4 mb-4 text-center">
+                <div class="display-4 text-primary mb-2">
+                    <i class="fas fa-vote-yea"></i>
+                </div>
+                <h1 class="h2 fw-bold mb-2">{{ election.title }}</h1>
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    <span class="badge bg-info px-3 py-2 rounded-pill">
+                        <i class="fas fa-calendar me-1"></i>
+                        {{ election.start_date|date:"M d, Y" }} - {{ election.end_date|date:"M d, Y" }}
+                    </span>
+                    <span class="badge bg-success px-3 py-2 rounded-pill">
+                        <i class="fas fa-clock me-1"></i>
+                        Ends in: {{ election.end_date|timeuntil }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-lg fade-in">
+                <!-- Card Header - PRESERVED original with enhancement -->
+                <div class="card-header bg-transparent border-0 pt-4 px-4">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-3">
+                            <i class="fas fa-vote-yea fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-1 fw-bold">Cast Your Vote</h4>
+                            <p class="text-secondary mb-0">{{ election.title }}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Body - PRESERVED original content -->
+                <div class="card-body p-4">
+                    <!-- ========================================
+                         VOTING PROGRESS - ENHANCED with preserved structure
+                         ======================================== -->
+                    <div class="bg-light rounded-4 p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-chart-line text-primary me-2"></i>
+                                Voting Progress
+                            </h5>
+                            <span class="badge bg-primary px-3 py-2 rounded-pill">
+                                <i class="fas fa-check-circle me-1"></i>
+                                {{ total_positions|add:"-"|add:remaining_count|default:"0" }} of {{ total_positions }} completed
+                            </span>
+                        </div>
+                        
+                        <!-- Progress Bar - PRESERVED -->
+                        <div class="progress mb-3" style="height: 20px;">
+                            {% with completed=total_positions|add:"-1" %}
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                 role="progressbar"
+                                 style="width: {% if total_positions > 0 %}{% widthratio voted_positions|length total_positions 100 %}{% else %}0{% endif %}%">
+                                {% widthratio voted_positions|length total_positions 100 %}%
+                            </div>
+                            {% endwith %}
+                        </div>
+                        
+                        <!-- Position Steps - PRESERVED with enhancement -->
+                        <div class="d-flex justify-content-between mt-3 flex-wrap gap-2">
+                            {% for position in positions %}
+                            <span class="badge {% if position.id in voted_positions %}bg-success{% elif position == current_position %}bg-primary pulse{% else %}bg-secondary{% endif %} p-3 rounded-pill flex-fill text-center">
+                                <i class="fas {% if position.id in voted_positions %}fa-check-circle{% elif position == current_position %}fa-arrow-right{% else %}fa-circle{% endif %} me-1"></i>
+                                {{ position.title }}
+                            </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <!-- Important Notice - PRESERVED with enhancement -->
+                    <div class="alert alert-info border-0 bg-info bg-opacity-10 p-4 rounded-4 mb-4">
+                        <div class="d-flex">
+                            <div class="display-6 text-info me-3">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div>
+                                <strong class="text-info d-block mb-2">Now Voting For: {{ current_position.title }}</strong>
+                                <p class="mb-0 text-secondary">
+                                    <i class="fas fa-hourglass-half me-2"></i>
+                                    {{ remaining_count }} position(s) remaining after this
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <!-- Current Position Title - PRESERVED -->
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 rounded-2 p-3 me-3">
+                            <i class="fas fa-briefcase fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Select Contestant for:</h5>
+                            <h3 class="h4 text-primary mb-0">{{ current_position.title }}</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Position Description - PRESERVED -->
+                    {% if current_position.description %}
+                    <div class="alert alert-light border mb-4">
+                        <i class="fas fa-info-circle me-2"></i>
+                        {{ current_position.description }}
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Voting Form - PRESERVED -->
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <!-- Form Errors - PRESERVED with enhancement -->
+                        {% if form.errors %}
+                        <div class="alert alert-danger border-0 bg-danger bg-opacity-10 p-4 rounded-4 mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="display-6 text-danger me-3">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-danger d-block mb-1">Selection Required</strong>
+                                    <p class="mb-0">Please select a contestant before submitting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        <!-- Contestants Grid - PRESERVED with enhancement -->
+                        <div class="row g-4 mb-4">
+                            {% for contestant in form.fields.contestant.queryset %}
+                            <div class="col-md-6">
+                                <div class="card h-100 contestant-card border-0 shadow-sm hover-lift">
+                                    <div class="card-body p-3">
+                                        <div class="form-check">
+                                            <!-- Radio Button - PRESERVED -->
+                                            <input class="form-check-input custom-radio"
+                                                   type="radio"
+                                                   name="contestant"
+                                                   id="contestant_{{ contestant.id }}"
+                                                   value="{{ contestant.id }}"
+                                                   required>
+                                            
+                                            <!-- Contestant Label - PRESERVED -->
+                                            <label class="form-check-label w-100"
+                                                   for="contestant_{{ contestant.id }}">
+                                                <div class="d-flex align-items-start">
+                                                    <!-- Photo or Placeholder - PRESERVED -->
+                                                    {% if contestant.photo %}
+                                                        <img src="{{ contestant.photo.url }}"
+                                                             alt="{{ contestant.name }}"
+                                                             class="contestant-photo me-3 rounded-circle border shadow-sm"
+                                                             style="width: 70px; height: 70px; object-fit: cover;">
+                                                    {% else %}
+                                                        <div class="contestant-photo-placeholder me-3 rounded-circle bg-light d-flex align-items-center justify-content-center border"
+                                                             style="width: 70px; height: 70px;">
+                                                            <i class="fas fa-user fa-2x text-secondary"></i>
+                                                        </div>
+                                                    {% endif %}
+                                                    
+                                                    <!-- Contestant Details - PRESERVED -->
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="fw-bold mb-1">{{ contestant.name }}</h5>
+                                                        {% if contestant.party %}
+                                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-2 rounded-pill">
+                                                            <i class="fas fa-flag me-1"></i> {{ contestant.party }}
+                                                        </span>
+                                                        {% endif %}
+                                                        {% if contestant.bio %}
+                                                        <p class="small text-secondary mb-0 border-top pt-2 mt-2">
+                                                            {{ contestant.bio|truncatewords:15 }}
+                                                        </p>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Selection indicator -->
+                                    <div class="card-footer bg-transparent border-0 text-end p-3 pt-0">
+                                        <span class="small text-primary opacity-75">
+                                            <i class="fas fa-circle radio-indicator"></i>
+                                            Click to select
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <!-- Action Buttons - PRESERVED with enhancement -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{% url 'voters:voter_dashboard' %}" class="btn btn-outline-secondary btn-lg px-4 py-2 rounded-pill">
+                                <i class="fas fa-arrow-left me-2"></i> Back to Dashboard
+                            </a>
+                            
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm hover-scale"
+                                    onclick="return confirm('Submit your vote for {{ current_position.title|escapejs }}?')">
+                                <i class="fas fa-check-circle me-2"></i>
+                                {% if remaining_count > 1 %}
+                                    Vote & Continue 
+                                    <span class="badge bg-white text-primary ms-2 rounded-pill">
+                                        {{ remaining_count|add:"-1" }} left
+                                    </span>
+                                    <i class="fas fa-arrow-right ms-2"></i>
+                                {% else %}
+                                    <i class="fas fa-flag-checkered me-2"></i>
+                                    Submit Final Vote
+                                    <i class="fas fa-trophy ms-2"></i>
+                                {% endif %}
+                            </button>
+                        </div>
+                        
+                        <!-- Voting Tips -->
+                        <div class="mt-4 text-center">
+                            <small class="text-secondary">
+                                <i class="fas fa-shield-alt text-primary me-1"></i>
+                                Your vote is encrypted and secure • You can review before final submission
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Need Help Section -->
+            <div class="text-center mt-4">
+                <div class="d-inline-flex align-items-center bg-light rounded-pill px-4 py-2">
+                    <i class="fas fa-question-circle text-primary me-2"></i>
+                    <span class="small">Need help? Contact support at <strong>support@electra.com</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add custom CSS for enhanced styling -->
+<style>
+    .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+        border-color: var(--bs-primary) !important;
+    }
+    
+    .hover-scale {
+        transition: transform 0.2s ease;
+    }
+    .hover-scale:hover {
+        transform: scale(1.02);
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .pulse {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(var(--bs-primary-rgb), 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(var(--bs-primary-rgb), 0); }
+        100% { box-shadow: 0 0 0 0 rgba(var(--bs-primary-rgb), 0); }
+    }
+    
+    /* Custom radio button styling */
+    .custom-radio {
+        width: 1.3em;
+        height: 1.3em;
+        margin-top: 0.3em;
+        cursor: pointer;
+    }
+    
+    .custom-radio:checked {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+    
+    /* Contestant card hover effect */
+    .contestant-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    
+    .contestant-card:hover {
+        border-color: var(--bs-primary) !important;
+        background-color: rgba(var(--bs-primary-rgb), 0.02);
+    }
+    
+    .contestant-card:has(.custom-radio:checked) {
+        border-color: var(--bs-primary) !important;
+        background-color: rgba(var(--bs-primary-rgb), 0.05);
+    }
+    
+    .contestant-card .radio-indicator {
+        transition: color 0.3s ease;
+    }
+    
+    .contestant-card:hover .radio-indicator {
+        color: var(--bs-primary) !important;
+    }
+    
+    /* Progress bar animation */
+    .progress-bar-striped {
+        background-size: 1rem 1rem;
+    }
+    
+    .progress-bar-animated {
+        animation: progress-bar-stripes 1s linear infinite;
+    }
+    
+    /* Badge enhancements */
+    .badge {
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        .d-flex.justify-content-between.mt-3 {
+            flex-direction: column;
+        }
+        
+        .badge.p-3 {
+            width: 100%;
+        }
+        
+        .btn-lg {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+        }
+        
+        .contestant-photo, .contestant-photo-placeholder {
+            width: 50px !important;
+            height: 50px !important;
+        }
+        
+        .contestant-photo-placeholder i {
+            font-size: 1.2rem !important;
+        }
+    }
+    .progress {
+        background-color: #e9ecef;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        transition: width 0.6s ease;
+        border-radius: 30px;
+    }
+</style>
+{% endblock %}
+
+

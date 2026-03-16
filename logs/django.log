@@ -1,0 +1,1096 @@
+INFO 2026-03-02 10:24:12,750 autoreload Watching for file changes with StatReloader
+INFO 2026-03-02 10:24:29,802 log "POST /admin/login/?next=/admin/dashboard/ HTTP/1.1" 200 4269
+INFO 2026-03-02 10:24:44,203 log "POST /admin/login/?next=/admin/dashboard/ HTTP/1.1" 200 4269
+INFO 2026-03-02 10:25:01,091 log "POST /admin/login/?next=/admin/dashboard/ HTTP/1.1" 200 4269
+INFO 2026-03-02 10:25:14,621 log "GET / HTTP/1.1" 200 15574
+INFO 2026-03-02 10:25:19,732 log "GET /accounts/login/ HTTP/1.1" 200 6447
+INFO 2026-03-02 10:25:35,188 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-02 10:25:35,215 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 10:25:35,259 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+INFO 2026-03-02 10:25:51,798 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-02 10:25:52,017 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3598
+INFO 2026-03-02 10:25:56,060 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3598
+INFO 2026-03-02 10:28:30,770 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 10:28:30,834 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+INFO 2026-03-02 10:28:36,837 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-02 10:28:36,848 log "GET /accounts/login/ HTTP/1.1" 200 6816
+INFO 2026-03-02 10:28:39,234 log "GET / HTTP/1.1" 200 15574
+INFO 2026-03-02 10:44:18,003 log "GET /accounts/login/ HTTP/1.1" 200 6447
+INFO 2026-03-02 10:44:32,390 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-02 10:44:32,415 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 10:44:32,447 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+INFO 2026-03-02 10:47:49,444 log "GET /elections/create/ HTTP/1.1" 200 9076
+INFO 2026-03-02 10:57:24,348 autoreload Watching for file changes with StatReloader
+INFO 2026-03-02 10:57:38,125 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-02 10:57:38,149 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 10:57:38,214 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+INFO 2026-03-02 11:03:38,822 log "GET /accounts/voter-ids/ HTTP/1.1" 200 10340
+INFO 2026-03-02 11:05:15,876 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-02 11:05:15,889 log "GET /accounts/login/ HTTP/1.1" 200 6816
+INFO 2026-03-02 11:05:17,995 log "GET / HTTP/1.1" 200 15574
+INFO 2026-03-02 11:25:20,386 autoreload Watching for file changes with StatReloader
+INFO 2026-03-02 13:17:53,547 autoreload Watching for file changes with StatReloader
+INFO 2026-03-02 13:18:31,838 log "GET / HTTP/1.1" 200 15574
+INFO 2026-03-02 13:18:35,079 log "GET /accounts/login/ HTTP/1.1" 200 6447
+INFO 2026-03-02 13:18:48,090 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-02 13:18:48,112 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 13:18:48,156 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+INFO 2026-03-02 14:17:21,634 log "GET /super-admin/users/ HTTP/1.1" 302 0
+INFO 2026-03-02 14:17:21,646 log "GET /accounts/login/?next=/super-admin/users/ HTTP/1.1" 200 6447
+INFO 2026-03-02 14:17:47,033 log "POST /accounts/login/?next=/super-admin/users/ HTTP/1.1" 200 6734
+INFO 2026-03-02 14:17:58,596 log "POST /accounts/login/?next=/super-admin/users/ HTTP/1.1" 200 6734
+INFO 2026-03-02 14:31:39,150 log "POST /accounts/login/?next=/super-admin/users/ HTTP/1.1" 302 0
+INFO 2026-03-02 14:31:39,240 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 14:31:39,270 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+INFO 2026-03-02 14:31:55,647 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-02 14:31:55,656 log "GET /accounts/login/ HTTP/1.1" 200 6816
+INFO 2026-03-02 14:32:15,931 log "POST /accounts/login/ HTTP/1.1" 200 6734
+INFO 2026-03-02 14:32:26,174 log "POST /accounts/login/ HTTP/1.1" 200 6734
+INFO 2026-03-02 14:32:48,566 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-02 14:32:48,585 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-02 14:32:48,617 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+INFO 2026-03-02 14:32:54,937 log "GET /super-admin/users/ HTTP/1.1" 200 8893
+INFO 2026-03-02 14:33:59,905 log "GET /accounts/voter-ids/ HTTP/1.1" 200 10340
+INFO 2026-03-02 16:19:59,753 log "GET / HTTP/1.1" 200 15574
+INFO 2026-03-04 09:30:52,490 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 09:31:57,692 log "GET / HTTP/1.1" 200 15574
+WARNING 2026-03-04 09:32:00,665 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 09:32:06,470 log "GET /accounts/login/ HTTP/1.1" 200 6447
+WARNING 2026-03-04 09:32:06,545 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:32:30,294 log "POST /accounts/login/ HTTP/1.1" 200 6732
+WARNING 2026-03-04 09:32:30,333 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:32:56,087 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:32:56,616 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:32:58,399 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9847
+WARNING 2026-03-04 09:32:58,515 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:33:13,585 log "GET /elections/create/ HTTP/1.1" 200 9076
+WARNING 2026-03-04 09:33:13,975 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:33:18,802 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:33:18,953 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:33:19,855 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:33:19,902 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:33:22,881 log "GET /super-admin/users/ HTTP/1.1" 200 8893
+WARNING 2026-03-04 09:33:23,014 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:36:56,339 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 09:37:25,726 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:37:25,921 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:37:26,100 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:38:38,386 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:38:38,501 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:38:38,730 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:38:52,141 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:38:52,197 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:39:08,470 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:39:08,522 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:39:08,574 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:39:08,635 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:39:19,259 log "GET /voter/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:39:19,322 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:39:19,369 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9865
+WARNING 2026-03-04 09:39:19,423 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:39:28,737 log "GET /elections/create/ HTTP/1.1" 200 9076
+WARNING 2026-03-04 09:39:28,787 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:39:33,091 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+INFO 2026-03-04 09:39:40,593 log "GET /admin HTTP/1.1" 301 0
+INFO 2026-03-04 09:39:40,625 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:39:42,220 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3598
+WARNING 2026-03-04 09:39:42,482 log "GET /static/admin/css/base.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,582 log "GET /static/admin/css/login.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,609 log "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,659 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,719 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,769 log "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,832 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,849 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,857 log "GET /static/admin/css/login.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:39:42,870 log "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:40:10,587 log "GET /login HTTP/1.1" 404 179
+WARNING 2026-03-04 09:40:17,540 log "GET /home HTTP/1.1" 404 179
+INFO 2026-03-04 09:40:29,345 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:40:29,382 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:40:29,656 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:40:29,789 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:41:24,657 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 09:41:51,660 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:41:51,906 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:41:52,051 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:41:52,155 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:42:00,922 log "GET /super-admin/users/ HTTP/1.1" 200 8893
+WARNING 2026-03-04 09:42:01,222 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:42:10,686 log "GET /accounts/voter-ids/ HTTP/1.1" 200 10340
+WARNING 2026-03-04 09:42:10,832 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:47:19,471 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 09:47:26,445 log "GET / HTTP/1.1" 200 15574
+WARNING 2026-03-04 09:47:26,509 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 09:47:28,320 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 09:53:34,478 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:53:34,555 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:53:34,756 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:53:34,913 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 09:57:51,381 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 09:58:27,636 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 09:58:27,730 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 09:58:28,788 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9491
+WARNING 2026-03-04 09:58:28,988 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 10:01:42,998 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\electra\settings.py changed, reloading.
+INFO 2026-03-04 10:01:46,888 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 10:04:42,226 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 10:04:48,939 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9492
+WARNING 2026-03-04 10:04:49,041 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 10:04:53,926 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 10:04:53,956 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9492
+WARNING 2026-03-04 10:04:54,162 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 10:06:28,780 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9492
+WARNING 2026-03-04 10:06:28,843 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:06:30,417 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 10:12:36,165 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 10:12:48,917 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 10:12:49,012 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+WARNING 2026-03-04 10:12:49,099 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:12:49,524 log "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2026-03-04 10:13:22,353 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+WARNING 2026-03-04 10:13:22,770 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 10:24:12,992 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 10:24:29,946 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+WARNING 2026-03-04 10:24:30,162 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:30,207 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:30,295 log "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2026-03-04 10:24:46,511 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+WARNING 2026-03-04 10:24:46,622 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:46,733 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:47,868 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 10:24:50,539 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+WARNING 2026-03-04 10:24:50,634 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:50,707 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:51,460 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 10:24:58,465 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+WARNING 2026-03-04 10:24:58,595 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:58,624 log "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2026-03-04 10:24:59,250 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-04 10:32:35,404 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\electra\urls.py changed, reloading.
+INFO 2026-03-04 10:32:44,328 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 11:46:23,142 autoreload Watching for file changes with StatReloader
+ERROR 2026-03-04 11:46:34,566 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:46:34,970 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 11:46:35,138 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:46:35,141 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 11:46:51,906 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:46:51,908 log "GET /admin/ HTTP/1.1" 400 143
+ERROR 2026-03-04 11:46:52,192 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:46:52,195 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 11:47:10,494 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:47:10,497 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 11:47:10,643 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 11:47:10,661 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+INFO 2026-03-04 12:15:30,455 autoreload Watching for file changes with StatReloader
+ERROR 2026-03-04 12:15:54,691 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:15:54,784 log "GET / HTTP/1.1" 400 143
+ERROR 2026-03-04 12:16:16,673 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:16:16,676 log "GET /login HTTP/1.1" 400 143
+ERROR 2026-03-04 12:16:40,021 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:16:40,023 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+INFO 2026-03-04 12:36:56,088 autoreload Watching for file changes with StatReloader
+ERROR 2026-03-04 12:37:02,187 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:02,270 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:02,299 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:02,306 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:03,108 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:03,111 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:03,230 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:03,233 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:03,929 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:03,932 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:04,047 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:04,050 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:04,461 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:04,464 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:04,562 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:04,596 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:04,726 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:04,729 log "GET /super-admin/dashboard/ HTTP/1.1" 400 143
+ERROR 2026-03-04 12:37:04,849 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\utils\deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\http\request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-04 12:37:04,851 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 400 143
+INFO 2026-03-04 12:43:14,832 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 12:43:19,452 log "GET /super-admin/dashboard/ HTTP/1.1" 301 0
+INFO 2026-03-04 12:43:19,505 log code 400, message Bad request version ('\xbby\\x9e\xf2\xe2=\xebt\\x83\xa4gB\\x18\\x9b\xd4\\x93p*\\x07\\x81\xed\xdc8\xb8\xb9\\x17\\x03t\xbe\\x1ay4\\x00')
+ERROR 2026-03-04 12:43:19,505 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:19,511 log code 400, message Bad request version ('\\x96\xa1\xa3\\x8e\xf0\xba\\x87PI\\x89\\x92\xd6T\\x96\\x01\xc9\xd1%R\xe7\xdc\\x02O\\x8d#\xd5_Y\\xad}\xb5\xd9\\x00')
+ERROR 2026-03-04 12:43:19,511 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:24,977 log code 400, message Bad request version ('\xbe\xe7\xee\\x8bqK')
+ERROR 2026-03-04 12:43:24,977 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:24,982 log code 400, message Bad request version ('\\x00\\x12\\x00\\x10\\x04\\x03\\x08\\x04\\x04\\x01\\x05\\x03\\x08\\x05\\x05\\x01\\x08\\x06\\x06\\x01\\x003\\x04\xef\\x04\xed\xaa\xaa\\x00\\x01\\x00\\x11\xec\\x04\xc0\\x90R\xae\\x1b\xb0\xaa6\xf7l:\\x05"\xe2\\x1b\xb5\\x8f)k')
+ERROR 2026-03-04 12:43:24,982 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:25,964 log code 400, message Bad request version ('S\xbd\xd4\xc7PS\xccEc\xf2)\xe3\xf3\xc9J\\x8c\\x9f\\x8665\xd8\\x8c\\x05(\\x96')
+ERROR 2026-03-04 12:43:25,966 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:25,968 log code 400, message Bad request version ('\xce\xbb\xe3')
+ERROR 2026-03-04 12:43:25,969 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:27,280 log code 400, message Bad request version (',\xdag1\\x9bS\xcf|A\\x05\xb2\xcc\xdd\xe0\\x83\xa2\\x95\\x9f\\x95p=W`\xac')
+ERROR 2026-03-04 12:43:27,280 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:27,282 log code 400, message Bad request version ('\\x00\\x02\\x01\\x00\\x00\\x05\\x00\\x05\\x01\\x00\\x00\\x00\\x00\\x00\\x12\\x00\\x00\\x00+\\x00\\x07\\x06\\x8a\\x8a\\x03\\x04\\x03\\x03\\x00')
+ERROR 2026-03-04 12:43:27,282 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:33,128 log code 400, message Bad request version ('\xba\xba\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x06\\x93::\\x00\\x00\\x00')
+ERROR 2026-03-04 12:43:33,129 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:43:33,135 log code 400, message Bad request version ('\\x00\\x12\\x00\\x10\\x04\\x03\\x08\\x04\\x04\\x01\\x05\\x03\\x08\\x05\\x05\\x01\\x08\\x06\\x06\\x01\\x00')
+ERROR 2026-03-04 12:43:33,135 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:11,006 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\electra\settings.py changed, reloading.
+INFO 2026-03-04 12:47:13,219 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 12:47:24,377 log code 400, message Bad request version ('jj\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x063\xfa\xfa\\x00\\x00D\xcd\\x00\\x05\\x00\\x03\\x02h2\\x003\\x04\xef\\x04\xed**\\x00\\x01\\x00\\x11\xec\\x04\xc0O\xe8\\x9e\\x10#7eH\xa5\\x82\\x11\\x99\xbe\xab\\x86\\x8d\xc5\\x9e\\x17[\\x8c+\xac\xb2\\x19\xd8\xa3L\xe5\xba\xe57\\x1a`\\\\6\xa7\xdas\\x87\xd0\xcdP\xc0^\xebZ?;\xc1')
+ERROR 2026-03-04 12:47:24,377 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:24,380 log code 400, message Bad request version ('\xd6\xf2&Us\xa6\xdf\\x19[`\\x81\xce\\x80\\x07\xb2h)Hm\xc8')
+ERROR 2026-03-04 12:47:24,383 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:25,621 log code 400, message Bad request version ('1L\\x89\xc3.')
+ERROR 2026-03-04 12:47:25,622 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:25,627 log code 400, message Bad request version ('\xfd\xbd1\\x88\xb8\xa4q')
+ERROR 2026-03-04 12:47:25,627 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:27,861 log code 400, message Bad request version ('\\x93\xb3f\xf2\xd0\xc3|')
+ERROR 2026-03-04 12:47:27,861 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:47:27,865 log code 400, message Bad request version ('\xbf3\\x80\\x11\\x07\xb2E\xd45\\x8e\xb2p\xa7\xa3\xf5>l0\\x8f/p\xc1\xde\\x96q)VIR\\x92\\x96\xb0\xe1\\x05\\x7fx\\x95\xd7')
+ERROR 2026-03-04 12:47:27,866 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:48:09,745 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\electra\settings.py changed, reloading.
+INFO 2026-03-04 12:48:11,746 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 12:48:24,448 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 12:48:45,109 log code 400, message Bad request version ('\xaa\xaa\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x06S\\x8a\\x8a\\x00\\x00\\x00\\x05\\x00\\x05\\x01\\x00\\x00\\x00\\x00\\x00\\x12\\x00\\x00\\x00\\x1b\\x00\\x03\\x02\\x00\\x02\\x00')
+ERROR 2026-03-04 12:48:45,109 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:48:45,111 log code 400, message Bad HTTP/0.9 request type ('\\x16\\x03\\x01\\x06')
+ERROR 2026-03-04 12:48:45,112 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:48:52,234 log code 400, message Bad request version ('jj\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x063ZZ\\x00\\x00\\x00')
+ERROR 2026-03-04 12:48:52,234 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:48:52,236 log code 400, message Bad request version ('\\x049L\xba\xb0')
+ERROR 2026-03-04 12:48:52,237 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:10,252 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 12:53:15,031 log code 400, message Bad request version ('JJ\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x06S\xda\xda\\x00\\x00\\x00')
+ERROR 2026-03-04 12:53:15,031 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:15,034 log code 400, message Bad request version ('**\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x06s\xfa\xfa\\x00\\x00\\x00')
+ERROR 2026-03-04 12:53:15,034 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:16,231 log code 400, message Bad request version ('\\x02h2\\x08http/1.1\\x00#\\x00\\x00\\x00')
+ERROR 2026-03-04 12:53:16,231 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:16,233 log code 400, message Bad request version ('\xe7Z@S/\xe0\xe5\xbb\xc3\xe9\xcc\xd7\\x06\\x06}\xe6Yw\xda5\\\\Pf\xa8\\x9b\\x03>\xab\xb8B,\\x8b\xf0\xb6P\xba\\x88g&\xd3\\x17>\xd8&\\x9f\xd41\\x9bc"\xc4{\xc0\xbd\xea4\\\\E\xa1\xa2\xd6\xbf\xf3jS\\x11\xb8J\xe62K\xa5&\xaf')
+ERROR 2026-03-04 12:53:16,233 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:16,873 log code 400, message Bad request version ('\xb8\xb8\\x7f\xd8hO\\x02\\x9f\xb1\xb6A\xa6k\\x17<\\x86\\x1b\xc3wa\xb4\xb1L\\x97\\x92c)\xf7zF\\x05*WS')
+ERROR 2026-03-04 12:53:16,874 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:16,879 log code 400, message Bad request syntax ('\\x16\\x03\\x01\\x07\\x00\\x01\\x00\\x06\xfc\\x03\\x03')
+ERROR 2026-03-04 12:53:16,879 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,125 log code 400, message Bad request version ('\\x00\\x02\\x01\\x00\\x00')
+ERROR 2026-03-04 12:53:17,125 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,131 log code 400, message Bad request version ('\\x889y\xcf\xacV=\xd8\\x8dn\xf0\\x91YO_M.r\xdc\xf9\\x07!\xae\xce\xa6\xf4RD\\xad')
+ERROR 2026-03-04 12:53:17,131 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,388 log code 400, message Bad request version ('\\x03\\x90\\x99\xaf')
+ERROR 2026-03-04 12:53:17,388 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,393 log code 400, message Bad request version ('\\x9a\\x9a\\x13\\x03\\x13\\x01\\x13\\x02\xcc\xa9\xcc\xa8\xc0+\xc0/\xc0,\xc00\xc0\\x13\xc0\\x14\\x00\\x9c\\x00\\x9d\\x00/\\x005\\x01\\x00\\x063\xaa\xaa\\x00\\x00\\x00')
+ERROR 2026-03-04 12:53:17,396 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,705 log code 400, message Bad request version ('\xc9')
+ERROR 2026-03-04 12:53:17,705 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:17,707 log code 400, message Bad request version ('\\x9a\xc0j\xc4\xfa8Z|\xa9<=\xccd\xcb[\xf4\xd0\xc5\\x8b\xc9\xa9P"7G\\x13\xb2D\xe5\\x87\xf5\\x17\\x94481\xea\xacS\\x91')
+ERROR 2026-03-04 12:53:17,707 log You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-03-04 12:53:37,064 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 12:53:37,200 log "GET /static/css/style.css HTTP/1.1" 200 12229
+INFO 2026-03-04 12:53:57,739 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-04 12:54:11,606 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 12:54:11,650 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 12:54:11,742 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-04 12:54:33,490 log "GET /super-admin/users/ HTTP/1.1" 200 8888
+INFO 2026-03-04 12:54:41,026 log "GET /elections/create/ HTTP/1.1" 200 9071
+INFO 2026-03-04 12:54:41,120 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 12:55:46,574 log "GET /accounts/voter-ids/ HTTP/1.1" 200 10335
+INFO 2026-03-04 12:55:46,626 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 12:55:54,899 log "GET /accounts/voter-ids/1/delete/ HTTP/1.1" 200 7036
+INFO 2026-03-04 12:55:57,161 log "GET /accounts/voter-ids/ HTTP/1.1" 200 10335
+INFO 2026-03-04 12:56:02,063 log "GET /accounts/voter-ids/add/ HTTP/1.1" 200 8024
+INFO 2026-03-04 12:56:10,161 basehttp - Broken pipe from ('127.0.0.1', 52912)
+ERROR 2026-03-04 12:56:10,780 log "POST /accounts/voter-ids/add/ HTTP/1.1" 500 145
+INFO 2026-03-04 12:56:21,429 log "POST /accounts/voter-ids/add/ HTTP/1.1" 200 8356
+INFO 2026-03-04 12:56:27,378 log "GET /accounts/voter-ids/add/ HTTP/1.1" 200 8024
+INFO 2026-03-04 12:56:31,168 log "GET /accounts/voter-ids/ HTTP/1.1" 200 11739
+INFO 2026-03-04 12:56:36,145 log "GET /accounts/voter-ids/bulk-upload/ HTTP/1.1" 200 7652
+INFO 2026-03-04 12:57:09,605 log "POST /accounts/voter-ids/bulk-upload/ HTTP/1.1" 302 0
+INFO 2026-03-04 12:57:09,635 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24745
+INFO 2026-03-04 12:57:09,698 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 12:57:35,617 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24383
+INFO 2026-03-04 12:57:41,603 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-04 12:57:42,818 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-04 12:57:45,851 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24383
+INFO 2026-03-04 12:57:59,852 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-04 12:57:59,864 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-04 12:58:04,670 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 12:58:45,911 log "POST /accounts/register/ HTTP/1.1" 200 8263
+INFO 2026-03-04 12:58:45,941 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 12:59:13,359 log "POST /accounts/register/ HTTP/1.1" 200 7990
+INFO 2026-03-04 12:59:38,618 log "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-03-04 12:59:38,642 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 12:59:38,758 log "GET /voter/dashboard/ HTTP/1.1" 200 11673
+INFO 2026-03-04 12:59:55,646 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 12:59:55,670 log "GET /voter/dashboard/ HTTP/1.1" 200 11307
+INFO 2026-03-04 12:59:55,721 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 12:59:56,854 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 12:59:56,874 log "GET /voter/dashboard/ HTTP/1.1" 200 11307
+INFO 2026-03-04 13:00:00,103 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:00:00,115 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-04 13:00:05,104 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 13:00:43,064 log "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:00:43,100 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 13:00:43,123 log "GET /voter/dashboard/ HTTP/1.1" 200 11661
+INFO 2026-03-04 13:01:00,609 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:01:00,624 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-04 13:01:00,680 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:01:24,533 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:01:37,936 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 13:03:26,636 log "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:03:26,656 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 13:03:26,676 log "GET /voter/dashboard/ HTTP/1.1" 200 11664
+INFO 2026-03-04 13:03:26,751 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:03:56,003 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:03:56,013 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-04 13:04:11,122 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:04:11,145 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 13:04:11,174 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-04 13:04:33,361 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-04 13:04:33,427 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:08:49,505 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-04 13:08:49,520 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-04 13:08:49,597 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:08:56,148 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:14:30,235 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:14:30,284 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:14:31,615 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:14:32,604 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:14:50,661 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 13:15:26,443 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 13:36:57,796 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 13:37:12,994 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 13:37:13,086 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 13:37:16,165 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 16:20:57,833 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-04 16:20:57,971 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 16:21:05,743 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-04 16:21:06,907 log "GET /super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-04 16:21:06,924 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-04 16:21:08,968 log "GET /voter/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-04 16:21:08,979 log "GET /accounts/login/?next=/voter/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-04 16:21:15,967 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-04 16:21:19,085 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-04 16:21:37,988 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-04 16:21:38,135 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 16:21:38,630 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-04 16:21:51,757 log "GET /elections/create/ HTTP/1.1" 200 9071
+INFO 2026-03-04 16:23:35,651 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24450
+INFO 2026-03-04 16:23:35,710 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 16:25:35,370 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 17:01:37,578 autoreload Watching for file changes with StatReloader
+INFO 2026-03-04 17:01:41,676 log "GET /super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-04 17:01:41,727 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-04 17:01:41,875 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-04 17:01:57,606 log "POST /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6691
+INFO 2026-03-04 17:02:20,259 log "POST /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-04 17:02:20,285 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-04 17:02:20,331 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-04 17:02:30,945 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 09:13:10,363 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 09:14:15,990 log "GET /super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:14:20,442 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6442
+WARNING 2026-03-09 09:14:38,705 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-09 09:14:59,134 log "POST /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:15:03,575 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 09:15:07,514 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-09 09:15:07,872 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 09:17:30,177 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 09:17:30,669 log "GET /static/css/style.css HTTP/1.1" 304 0
+WARNING 2026-03-09 09:25:15,366 log "GET /super-admin/users/ntot HTTP/1.1" 404 179
+INFO 2026-03-09 09:35:29,892 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:35:30,180 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 09:35:30,650 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-09 09:35:31,434 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 09:35:38,490 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:35:38,507 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 09:35:53,076 log "POST /accounts/login/ HTTP/1.1" 200 6728
+INFO 2026-03-09 09:36:03,547 log "POST /accounts/login/ HTTP/1.1" 200 6728
+INFO 2026-03-09 09:36:10,859 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-09 09:36:25,458 log "POST /password-reset/ HTTP/1.1" 500 145
+INFO 2026-03-09 09:37:30,388 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 09:37:49,976 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 09:37:50,048 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 09:37:54,585 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 09:37:58,499 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 09:38:13,385 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:38:13,409 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 09:38:13,702 log "GET /voter/dashboard/ HTTP/1.1" 200 11655
+INFO 2026-03-09 09:38:34,381 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:38:34,392 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 09:38:39,374 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-09 09:38:43,468 log "POST /password-reset/ HTTP/1.1" 500 145
+ERROR 2026-03-09 09:39:07,756 log "POST /password-reset/ HTTP/1.1" 500 145
+ERROR 2026-03-09 09:45:07,595 log "POST /password-reset/ HTTP/1.1" 500 145
+ERROR 2026-03-09 09:45:19,903 log "POST /password-reset/ HTTP/1.1" 500 145
+INFO 2026-03-09 09:48:32,366 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 09:48:41,090 log "GET /voter/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-09 09:48:41,738 log "GET /accounts/login/?next=/voter/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-09 09:48:42,127 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 09:49:03,509 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 09:49:04,687 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 09:49:08,270 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 09:49:11,255 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-09 09:49:17,413 log "POST /password-reset/ HTTP/1.1" 500 145
+INFO 2026-03-09 10:01:52,638 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:02:38,859 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 10:02:38,936 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:02:42,505 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 10:02:44,951 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-09 10:02:52,740 forms Failed to send password reset email to 4
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\contrib\auth\forms.py", line 417, in send_mail
+    email_message.send()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\message.py", line 358, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 130, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 97, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 762, in login
+    raise last_exception
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 751, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 669, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4852e38c013sm341269155e9.8 - gsmtp')
+INFO 2026-03-09 10:02:52,842 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:02:52,865 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-09 10:03:16,474 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:03:16,673 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:03:16,986 log "GET /voter/dashboard/ HTTP/1.1" 200 11655
+INFO 2026-03-09 10:03:30,118 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:03:30,133 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 10:03:42,863 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:03:42,879 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:03:43,024 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-09 10:03:43,095 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:03:56,542 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:04:07,589 log "GET /super-admin/users/3/change-role/ HTTP/1.1" 200 7880
+INFO 2026-03-09 10:04:11,165 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:04:17,018 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:04:21,188 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:04:21,208 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-09 10:04:26,073 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24450
+INFO 2026-03-09 10:04:39,448 log "GET /accounts/voter-ids/2/delete/ HTTP/1.1" 200 7036
+INFO 2026-03-09 10:04:46,415 log "POST /accounts/voter-ids/2/delete/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:04:46,466 log "GET /accounts/voter-ids/ HTTP/1.1" 200 23399
+INFO 2026-03-09 10:04:46,660 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:05:00,175 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:05:00,198 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-09 10:05:02,907 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:05:08,227 log "GET /super-admin/users/3/change-role/ HTTP/1.1" 200 7880
+INFO 2026-03-09 10:05:13,848 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:05:14,652 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:05:15,541 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 10:05:23,768 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:05:23,805 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9486
+INFO 2026-03-09 10:05:29,196 log "GET /accounts/voter-ids/ HTTP/1.1" 200 23021
+INFO 2026-03-09 10:05:46,258 log "GET /accounts/voter-ids/add/ HTTP/1.1" 200 8024
+INFO 2026-03-09 10:05:46,334 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:05:51,601 log "POST /accounts/voter-ids/add/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:05:51,654 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24786
+INFO 2026-03-09 10:05:54,155 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24427
+INFO 2026-03-09 10:06:03,077 log "GET /accounts/voter-ids/13/edit/ HTTP/1.1" 200 8022
+INFO 2026-03-09 10:06:08,598 log "POST /accounts/voter-ids/13/edit/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:06:08,637 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24783
+INFO 2026-03-09 10:06:31,854 log "POST /accounts/voter-ids/13/edit/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:06:32,050 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24788
+INFO 2026-03-09 10:06:43,721 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:06:43,735 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 10:06:46,875 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 10:06:46,953 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:06:50,830 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-09 10:07:25,428 log "POST /accounts/register/ HTTP/1.1" 200 8232
+INFO 2026-03-09 10:07:37,151 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-09 10:07:59,221 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 10:07:59,273 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:08:16,792 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:08:17,034 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:08:17,287 log "GET /super-admin/dashboard/ HTTP/1.1" 200 9842
+INFO 2026-03-09 10:08:21,930 log "GET /elections/create/ HTTP/1.1" 200 9071
+INFO 2026-03-09 10:10:20,337 log "POST /elections/create/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:10:21,409 log "GET /elections/1/ HTTP/1.1" 200 10424
+INFO 2026-03-09 10:10:21,474 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:10:36,685 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:10:36,698 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 10:10:48,563 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:10:48,599 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:10:48,633 log "GET /voter/dashboard/ HTTP/1.1" 200 12955
+INFO 2026-03-09 10:11:28,482 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:11:28,492 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 10:11:28,543 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:11:41,519 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:11:41,551 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:11:41,690 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13250
+INFO 2026-03-09 10:11:54,137 log "GET /elections/1/edit/ HTTP/1.1" 200 9216
+INFO 2026-03-09 10:12:03,486 log "GET /elections/1/ HTTP/1.1" 200 10017
+INFO 2026-03-09 10:12:17,488 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 10:27:49,081 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\voters\views.py changed, reloading.
+INFO 2026-03-09 10:27:51,467 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:28:36,445 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\voters\views.py changed, reloading.
+INFO 2026-03-09 10:28:40,076 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:30:26,472 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\elections\models.py changed, reloading.
+INFO 2026-03-09 10:30:28,627 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:32:59,409 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\voters\views.py changed, reloading.
+INFO 2026-03-09 10:33:01,082 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:34:21,356 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\voters\views.py changed, reloading.
+INFO 2026-03-09 10:34:23,354 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:53:44,082 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 10:54:07,662 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 10:54:07,702 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:54:12,276 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 10:54:14,716 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 10:54:29,664 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:54:29,688 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:54:29,721 log "GET /voter/dashboard/ HTTP/1.1" 200 11655
+INFO 2026-03-09 10:54:42,925 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:54:42,935 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 10:54:54,908 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 10:54:54,938 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 10:54:55,006 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13547
+INFO 2026-03-09 10:55:07,498 log "GET /elections/1/edit/ HTTP/1.1" 200 9216
+INFO 2026-03-09 10:55:07,568 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 10:55:17,263 log "GET /elections/1/ HTTP/1.1" 200 10017
+INFO 2026-03-09 10:55:37,713 log "GET /elections/1/edit/ HTTP/1.1" 200 9216
+INFO 2026-03-09 11:04:09,160 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 11:04:20,777 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13865
+INFO 2026-03-09 11:04:20,822 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:04:28,272 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:04:28,298 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14277
+INFO 2026-03-09 11:04:41,577 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:04:41,621 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14275
+INFO 2026-03-09 11:04:54,004 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:04:54,041 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14277
+INFO 2026-03-09 11:09:37,929 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13866
+INFO 2026-03-09 11:17:34,967 log "GET /elections/1/ HTTP/1.1" 200 10017
+INFO 2026-03-09 11:17:35,055 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:17:45,732 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:19:04,335 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:19:04,373 log "GET /elections/1/ HTTP/1.1" 200 11944
+INFO 2026-03-09 11:19:04,440 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:19:12,007 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:19:28,606 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:19:28,642 log "GET /elections/1/ HTTP/1.1" 200 13747
+INFO 2026-03-09 11:19:35,826 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:19:52,518 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:19:52,561 log "GET /elections/1/ HTTP/1.1" 200 15540
+INFO 2026-03-09 11:20:01,299 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:20:26,838 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:20:26,881 log "GET /elections/1/ HTTP/1.1" 200 17358
+INFO 2026-03-09 11:20:26,954 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:20:39,424 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:21:03,990 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:21:04,030 log "GET /elections/1/ HTTP/1.1" 200 19178
+INFO 2026-03-09 11:21:23,693 log "GET /contestants/election/1/add-position/ HTTP/1.1" 200 8449
+INFO 2026-03-09 11:21:48,289 log "POST /contestants/election/1/add-position/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:21:48,333 log "GET /elections/1/ HTTP/1.1" 200 20966
+INFO 2026-03-09 11:21:48,408 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:23:43,631 log "GET /super-admin/users/ HTTP/1.1" 200 13966
+INFO 2026-03-09 11:23:43,703 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:23:51,864 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:23:51,877 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:24:03,274 log "POST /accounts/login/ HTTP/1.1" 200 6728
+INFO 2026-03-09 11:24:17,977 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:18,002 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:18,025 log "GET /voter/dashboard/ HTTP/1.1" 200 11667
+INFO 2026-03-09 11:24:32,501 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:32,524 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:24:44,034 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:44,054 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:44,081 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 11:24:44,150 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:24:49,574 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:24:49,605 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14275
+INFO 2026-03-09 11:25:11,936 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:25:11,951 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:25:24,894 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:25:24,916 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:25:24,934 log "GET /voter/dashboard/ HTTP/1.1" 200 11667
+INFO 2026-03-09 11:26:08,047 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:08,057 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:26:08,112 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:26:19,161 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:19,203 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:19,226 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14221
+INFO 2026-03-09 11:26:25,605 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:25,634 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14277
+INFO 2026-03-09 11:26:43,591 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:43,604 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:26:57,059 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:57,079 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:26:57,102 log "GET /voter/dashboard/ HTTP/1.1" 200 11655
+INFO 2026-03-09 11:28:03,097 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:03,109 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:28:03,176 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:28:14,879 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:14,901 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:14,950 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 11:28:24,807 log "GET /elections/1/start/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:24,867 log "GET /elections/1/ HTTP/1.1" 200 20964
+INFO 2026-03-09 11:28:39,998 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:40,011 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:28:55,291 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:55,313 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:28:55,358 log "GET /voter/dashboard/ HTTP/1.1" 200 15338
+INFO 2026-03-09 11:29:09,369 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:09,380 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:29:09,449 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:29:20,855 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:20,874 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:20,900 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14203
+INFO 2026-03-09 11:29:26,326 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:26,351 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14256
+INFO 2026-03-09 11:29:34,740 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:34,749 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:29:47,122 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:47,143 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:29:47,161 log "GET /voter/dashboard/ HTTP/1.1" 200 11655
+INFO 2026-03-09 11:35:05,600 autoreload C:\Users\Sir Mahmud\Desktop\Electra\electra\voters\views.py changed, reloading.
+INFO 2026-03-09 11:35:14,980 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 11:39:52,318 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 11:39:59,438 log "GET /voter/dashboard/ HTTP/1.1" 200 10357
+INFO 2026-03-09 11:39:59,446 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:40:16,182 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:40:16,216 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:40:27,471 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:40:27,491 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:40:27,736 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14202
+INFO 2026-03-09 11:40:37,757 log "GET /elections/1/ HTTP/1.1" 200 20561
+INFO 2026-03-09 11:40:47,400 log "GET /elections/1/edit/ HTTP/1.1" 200 9216
+INFO 2026-03-09 11:40:56,051 log "POST /elections/1/edit/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:40:56,095 log "GET /elections/1/ HTTP/1.1" 200 20941
+INFO 2026-03-09 11:41:05,378 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13865
+INFO 2026-03-09 11:41:05,479 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:41:09,535 log "GET /elections/1/toggle-visibility/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:41:09,566 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14277
+INFO 2026-03-09 11:41:23,983 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:41:23,998 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:41:36,386 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:41:36,407 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:41:36,430 log "GET /voter/dashboard/ HTTP/1.1" 200 12526
+INFO 2026-03-09 11:44:02,079 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:44:02,087 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:44:02,139 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:44:13,715 log "POST /accounts/login/ HTTP/1.1" 200 6727
+INFO 2026-03-09 11:44:23,298 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:44:23,460 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 11:44:23,498 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 11:47:09,028 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 11:47:09,058 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 11:47:09,127 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 11:50:24,714 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 11:50:24,796 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 15:12:20,488 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 15:12:20,538 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 15:12:33,285 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 15:12:33,325 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 15:12:33,369 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 15:12:51,220 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 15:12:51,228 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 15:12:52,933 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 15:15:22,057 log "GET /accounts/register/ HTTP/1.1" 200 7689
+INFO 2026-03-09 15:15:22,133 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 15:16:36,564 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 15:16:36,619 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 15:16:39,339 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-09 15:16:46,775 forms Failed to send password reset email to 3
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\contrib\auth\forms.py", line 417, in send_mail
+    email_message.send()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\message.py", line 358, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 130, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 97, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 762, in login
+    raise last_exception
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 751, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 669, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-439dadb85b8sm27076964f8f.17 - gsmtp')
+INFO 2026-03-09 15:16:46,858 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-09 15:16:46,883 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-09 16:05:05,516 autoreload Watching for file changes with StatReloader
+INFO 2026-03-09 16:05:20,584 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-09 16:05:20,599 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 16:05:28,363 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:05:28,417 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-09 16:52:38,358 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-09 16:52:38,431 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 16:52:40,742 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-09 16:52:54,495 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:52:54,521 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 16:52:54,695 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 16:53:14,750 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:53:14,759 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 16:53:28,658 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:53:28,680 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 16:53:28,724 log "GET /voter/dashboard/ HTTP/1.1" 200 12523
+INFO 2026-03-09 16:59:40,495 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:59:40,505 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-09 16:59:40,558 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-09 16:59:52,897 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-09 16:59:52,925 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-09 16:59:52,967 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-09 17:00:26,709 log "GET /elections/1/edit/ HTTP/1.1" 200 9216
+INFO 2026-03-09 17:00:55,628 log "GET /elections/1/ HTTP/1.1" 200 20580
+INFO 2026-03-09 17:00:55,683 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 09:06:29,483 autoreload Watching for file changes with StatReloader
+INFO 2026-03-10 09:06:52,330 log "GET /elections/1/ HTTP/1.1" 302 0
+INFO 2026-03-10 09:06:53,102 log "GET /accounts/login/?next=/elections/1/ HTTP/1.1" 200 6442
+INFO 2026-03-10 09:06:53,443 log "GET /static/css/style.css HTTP/1.1" 304 0
+WARNING 2026-03-10 09:06:55,091 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-10 09:07:16,268 log "POST /accounts/login/?next=/elections/1/ HTTP/1.1" 302 0
+INFO 2026-03-10 09:07:16,517 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 09:07:20,268 log "GET /voter/dashboard/ HTTP/1.1" 200 12523
+INFO 2026-03-10 10:07:07,087 autoreload Watching for file changes with StatReloader
+INFO 2026-03-10 10:07:17,918 log "GET /super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-10 10:07:22,364 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-10 10:07:22,795 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 10:15:26,260 log "POST /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-10 10:15:26,411 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 10:15:28,247 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-10 10:15:28,498 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 10:43:30,385 log "GET /elections/1/ HTTP/1.1" 302 0
+INFO 2026-03-10 10:43:30,405 log "GET /accounts/login/?next=/elections/1/ HTTP/1.1" 200 6442
+INFO 2026-03-10 10:43:30,456 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 10:43:50,008 log "POST /accounts/login/?next=/elections/1/ HTTP/1.1" 302 0
+INFO 2026-03-10 10:43:50,032 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 10:43:50,070 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-10 10:43:57,070 log "GET /elections/1/ HTTP/1.1" 200 20580
+INFO 2026-03-10 10:44:08,055 log "GET /contestants/election/1/add-contestant/?position=1 HTTP/1.1" 200 9919
+INFO 2026-03-10 16:16:24,100 log "GET /super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:16:24,123 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:16:30,078 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-10 16:16:30,131 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:16:34,347 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:16:38,889 log "GET /password-reset/ HTTP/1.1" 200 5549
+ERROR 2026-03-10 16:16:45,711 forms Failed to send password reset email to 3
+Traceback (most recent call last):
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\contrib\auth\forms.py", line 417, in send_mail
+    email_message.send()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\message.py", line 358, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 130, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\Sir Mahmud\Desktop\Electra\electra\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 97, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 762, in login
+    raise last_exception
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 751, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sir Mahmud\AppData\Local\Programs\Python\Python314\Lib\smtplib.py", line 669, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-48541aacd81sm78828755e9.14 - gsmtp')
+INFO 2026-03-10 16:16:46,600 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:16:46,698 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-10 16:19:02,035 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:19:02,095 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:19:02,185 log "GET /voter/dashboard/ HTTP/1.1" 200 12523
+INFO 2026-03-10 16:19:02,256 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:19:21,604 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:19:21,632 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-10 16:19:32,804 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:19:32,823 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:19:32,855 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-10 16:19:35,489 log "GET /accounts/voter-ids/ HTTP/1.1" 200 24427
+INFO 2026-03-10 16:19:47,644 log "GET /accounts/voter-ids/bulk-upload/ HTTP/1.1" 200 7652
+INFO 2026-03-10 16:20:01,562 log "GET /accounts/voter-ids/bulk-upload/ HTTP/1.1" 200 7652
+INFO 2026-03-10 16:20:54,695 log "POST /accounts/voter-ids/bulk-upload/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:20:54,766 log "GET /accounts/voter-ids/ HTTP/1.1" 200 38851
+INFO 2026-03-10 16:20:54,833 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:21:13,776 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:21:13,794 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-10 16:21:28,759 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:21:28,810 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:21:28,834 log "GET /voter/dashboard/ HTTP/1.1" 200 12535
+INFO 2026-03-10 16:21:47,916 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:21:47,929 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-10 16:22:04,961 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:22:04,989 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:22:05,018 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-10 16:22:05,095 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:22:29,814 log "GET /accounts/voter-ids/ HTTP/1.1" 200 38488
+INFO 2026-03-10 16:22:33,116 log "GET /accounts/voter-ids/add/ HTTP/1.1" 200 8024
+INFO 2026-03-10 16:43:58,975 autoreload Watching for file changes with StatReloader
+INFO 2026-03-10 16:44:08,272 log "GET / HTTP/1.1" 200 15569
+INFO 2026-03-10 16:44:08,323 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:44:11,239 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:44:13,937 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 16:44:23,568 basehttp - Broken pipe from ('127.0.0.1', 63000)
+INFO 2026-03-10 16:44:25,475 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:44:25,483 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-10 16:44:41,211 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:44:43,929 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 16:44:49,134 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:44:49,145 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-10 16:45:06,384 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:45:20,250 log "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:45:20,279 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:45:20,364 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14222
+INFO 2026-03-10 16:45:20,431 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:45:44,496 log "GET /elections/1/ HTTP/1.1" 200 20580
+INFO 2026-03-10 16:46:25,084 log "GET /password-reset/ HTTP/1.1" 200 7768
+INFO 2026-03-10 16:46:25,280 log "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:25,305 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:25,335 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13866
+INFO 2026-03-10 16:46:25,757 log "GET /accounts/voter-ids/add/ HTTP/1.1" 200 8024
+INFO 2026-03-10 16:46:25,979 log "GET /accounts/voter-ids/ HTTP/1.1" 200 38488
+INFO 2026-03-10 16:46:26,776 log "GET /voter/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:26,794 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:26,831 log "GET /super-admin/dashboard/ HTTP/1.1" 200 14240
+INFO 2026-03-10 16:46:27,033 log "GET / HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:27,060 log "GET /super-admin/dashboard/ HTTP/1.1" 200 13866
+INFO 2026-03-10 16:46:27,335 log "GET /accounts/voter-ids/bulk-upload/ HTTP/1.1" 200 7652
+INFO 2026-03-10 16:46:28,614 log "GET /accounts/login/?next=/super-admin/dashboard/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:46:28,823 log "GET /accounts/login/?next=/elections/1/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:57:29,402 autoreload Watching for file changes with StatReloader
+INFO 2026-03-10 16:57:39,518 log "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:57:39,540 log "GET /accounts/login/ HTTP/1.1" 200 6811
+INFO 2026-03-10 16:57:39,600 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:57:43,059 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 16:58:04,872 log "POST /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 16:58:18,349 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:58:18,362 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-10 16:59:56,040 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 16:59:56,101 log "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-10 17:00:00,698 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 17:00:33,984 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:00:33,990 log "GET /password-reset/done/ HTTP/1.1" 200 5036
+INFO 2026-03-10 17:00:48,461 log "GET /accounts/login/ HTTP/1.1" 200 6442
+INFO 2026-03-10 17:00:50,989 log "GET /password-reset/ HTTP/1.1" 200 5549
+INFO 2026-03-10 17:00:54,591 log "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:00:54,602 log "GET /password-reset/done/ HTTP/1.1" 200 5036

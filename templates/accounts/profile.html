@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     USER PROFILE PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-user-circle"></i> User Profile
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="row">
+                    <!-- Left Column: Basic Info -->
+                    <div class="col-md-6">
+                        <p><strong>Full Name:</strong> {{ user.get_full_name }}</p>
+                        <p><strong>Email:</strong> {{ user.email }}</p>
+                        <p><strong>Voter ID:</strong> <code>{{ user.voter_id }}</code></p>
+                    </div>
+                    
+                    <!-- Right Column: Role & Status -->
+                    <div class="col-md-6">
+                        <!-- Role Badge -->
+                        <p>
+                            <strong>Role:</strong> 
+                            {% if user.is_super_admin %}
+                                <span class="badge bg-danger">{{ user.get_role_display }}</span>
+                            {% elif user.is_admin %}
+                                <span class="badge bg-warning text-dark">{{ user.get_role_display }}</span>
+                            {% else %}
+                                <span class="badge bg-primary">{{ user.get_role_display }}</span>
+                            {% endif %}
+                        </p>
+                        
+                        <!-- Member Since -->
+                        <p><strong>Member Since:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+                        
+                        <!-- Account Status -->
+                        <p>
+                            <strong>Status:</strong> 
+                            {% if user.is_active %}
+                                <span class="badge bg-success">Active</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Inactive</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Divider -->
+                <hr>
+                
+                <!-- Back Button -->
+                <div class="text-center">
+                    <a href="{% url 'home' %}" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Back to Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

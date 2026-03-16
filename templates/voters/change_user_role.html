@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Change User Role - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     CHANGE USER ROLE PAGE
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-user-tag"></i> Change User Role
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <!-- User Information Display -->
+                <div class="alert alert-info">
+                    <strong>User:</strong> {{ user_obj.get_full_name }}<br>
+                    <strong>Email:</strong> {{ user_obj.email }}<br>
+                    <strong>Voter ID:</strong> {{ user_obj.voter_id }}
+                </div>
+                
+                <!-- Role Change Form -->
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Role Selection -->
+                    <div class="mb-3">
+                        <label for="id_role" class="form-label">Select New Role</label>
+                        {{ form.role }}
+                    </div>
+                    
+                    <!-- Divider -->
+                    <hr>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'voters:manage_users' %}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Role
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

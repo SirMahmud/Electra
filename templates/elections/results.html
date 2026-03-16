@@ -1,0 +1,509 @@
+{% extends 'base.html' %}
+
+{% block title %}Results - {{ election.title }}{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     ELECTION RESULTS PAGE - ENHANCED
+     ======================================== -->
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Hero Header -->
+            <div class="bg-primary bg-opacity-10 rounded-4 p-5 mb-4 text-center">
+                <div class="display-1 text-primary mb-3">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h1 class="display-5 fw-bold mb-2">Election Results</h1>
+                <h2 class="h3 text-primary mb-3">{{ election.title }}</h2>
+                <div class="d-flex justify-content-center gap-3">
+                    <span class="badge bg-success px-4 py-2 rounded-pill">
+                        <i class="fas fa-check-circle me-2"></i>Final Results
+                    </span>
+                    <span class="badge bg-info px-4 py-2 rounded-pill">
+                        <i class="fas fa-users me-2"></i>Total Votes: {{ total_votes }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-lg fade-in">
+                <!-- Card Header - PRESERVED original classes and content -->
+                <div class="card-header bg-transparent border-0 pt-4 px-4">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-3">
+                            <i class="fas fa-chart-bar fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-1 fw-bold">Election Results Dashboard</h3>
+                            <h5 class="mb-0 text-secondary">{{ election.title }}</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Body - PRESERVED original content -->
+                <div class="card-body p-4">
+                    <!-- Description - PRESERVED -->
+                    <div class="bg-light rounded-4 p-4 mb-4">
+                        <p class="lead mb-0">
+                            <i class="fas fa-quote-left text-primary me-2 opacity-50"></i>
+                            {{ election.description }}
+                            <i class="fas fa-quote-right text-primary ms-2 opacity-50"></i>
+                        </p>
+                    </div>
+
+                    <!-- Summary Alert - PRESERVED original classes and content -->
+                    <div class="alert alert-success border-0 bg-success bg-opacity-10 p-4 rounded-4 mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="display-6 text-success me-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong class="text-success d-block mb-1">Final Results Published</strong>
+                                <span class="text-secondary">
+                                    Total Votes Cast: <strong class="text-success fs-5">{{ total_votes }}</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if results_by_position %}
+
+                        {% for position_data in results_by_position %}
+                        <!-- ========================================
+                             POSITION BLOCK - ENHANCED WITH PRESERVED STRUCTURE
+                             ======================================== -->
+                        <div class="card mb-4 border-0 shadow-sm hover-lift" id="position-{{ position_data.position.id }}">
+
+                            <!-- Position Header - PRESERVED original structure and classes -->
+                            <div class="card-header bg-light bg-opacity-50 d-flex justify-content-between align-items-center py-3">
+                                <div>
+                                    <h5 class="mb-1 fw-bold">
+                                        <i class="fas fa-briefcase text-primary me-2"></i>
+                                        {{ position_data.position.title }}
+                                    </h5>
+                                    <small class="text-secondary">
+                                        <i class="fas fa-vote-yea me-1"></i>
+                                        Total Votes for this Position:
+                                        <strong class="text-primary">{{ position_data.total_votes }}</strong>
+                                    </small>
+                                </div>
+
+                                <!-- Winner OR Tie Badge - PRESERVED structure -->
+                                <div class="text-end">
+                                    {% if position_data.is_tie %}
+                                        <!-- Tie Badge - PRESERVED -->
+                                        <span class="badge bg-warning text-dark p-3 rounded-pill">
+                                            <i class="fas fa-equals me-2"></i>
+                                            It's a Tie!
+                                        </span>
+                                        <div class="mt-2">
+                                            <small class="text-muted bg-white rounded-pill px-3 py-1 d-inline-block">
+                                                <i class="fas fa-users me-1"></i>
+                                                Tied:
+                                                {% for tied in position_data.tied_contestants %}
+                                                    <strong>{{ tied.contestant.name }}</strong>{% if not forloop.last %}, {% endif %}
+                                                {% endfor %}
+                                            </small>
+                                        </div>
+                                    {% elif position_data.winner %}
+                                        <!-- Clear Winner Badge - PRESERVED -->
+                                        <span class="badge bg-warning text-dark p-3 rounded-pill">
+                                            <i class="fas fa-trophy me-2"></i>
+                                            Winner: <strong>{{ position_data.winner.contestant.name }}</strong>
+                                        </span>
+                                    {% else %}
+                                        <!-- No Votes Badge - PRESERVED -->
+                                        <span class="badge bg-secondary p-3 rounded-pill">
+                                            <i class="fas fa-minus-circle me-2"></i>
+                                            No Votes Cast
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="card-body p-4">
+                                {% if position_data.results %}
+
+                                    <!-- Chart Canvas - PRESERVED -->
+                                    <div class="mb-5 p-3 bg-white rounded-4 border">
+                                        <canvas id="chart-{{ position_data.position.id }}"
+                                                style="max-height: 300px; width: 100%;"></canvas>
+                                    </div>
+
+                                    <!-- Hidden chart data - PRESERVED -->
+                                    <div id="chartData-{{ position_data.position.id }}"
+                                         style="display: none;">
+                                        {% for result in position_data.results %}
+                                        <div class="result-item"
+                                             data-name="{{ result.contestant.name }}"
+                                             data-votes="{{ result.votes }}"
+                                             data-percentage="{{ result.percentage }}">
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+                                    <!-- Tie Alert - PRESERVED -->
+                                    {% if position_data.is_tie %}
+                                    <div class="alert alert-warning border-0 bg-warning bg-opacity-10 p-4 rounded-4 mb-4">
+                                        <div class="d-flex">
+                                            <div class="display-6 text-warning me-3">
+                                                <i class="fas fa-exclamation-triangle"></i>
+                                            </div>
+                                            <div>
+                                                <strong class="text-warning d-block mb-1">Tie Detected!</strong>
+                                                <p class="mb-0">This position has no winner as multiple contestants
+                                                received the same number of votes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+
+                                    <!-- Results Table - ENHANCED with PRESERVED structure -->
+                                    <div class="table-responsive rounded-4 border-0">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th class="ps-4 py-3">Rank</th>
+                                                    <th class="py-3">Contestant</th>
+                                                    <th class="py-3">Party</th>
+                                                    <th class="py-3">Votes</th>
+                                                    <th class="pe-4 py-3" style="min-width: 250px;">Percentage</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for result in position_data.results %}
+                                                <tr class="
+                                                    {% if position_data.is_tie and result.votes == position_data.results.0.votes %}
+                                                        table-warning
+                                                    {% elif not position_data.is_tie and forloop.first and result.votes > 0 %}
+                                                        table-success
+                                                    {% endif %}
+                                                ">
+                                                    <!-- Rank - PRESERVED structure -->
+                                                    <td class="ps-4">
+                                                        <div class="d-flex align-items-center">
+                                                            {% if position_data.is_tie and result.votes == position_data.results.0.votes %}
+                                                                <span class="badge bg-warning text-dark rounded-circle p-2 me-2">
+                                                                    <i class="fas fa-equals fa-sm"></i>
+                                                                </span>
+                                                                <strong>Tied</strong>
+                                                            {% elif not position_data.is_tie and forloop.first and result.votes > 0 %}
+                                                                <span class="badge bg-warning rounded-circle p-2 me-2">
+                                                                    <i class="fas fa-trophy fa-sm text-white"></i>
+                                                                </span>
+                                                                <strong>#1</strong>
+                                                            {% else %}
+                                                                <span class="text-secondary me-2">#{{ forloop.counter }}</span>
+                                                            {% endif %}
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contestant - PRESERVED structure with enhancements -->
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- Photo or Placeholder - PRESERVED -->
+                                                            {% if result.contestant.photo %}
+                                                                <img src="{{ result.contestant.photo.url }}"
+                                                                     alt="{{ result.contestant.name }}"
+                                                                     class="rounded-circle me-3 border shadow-sm"
+                                                                     style="width: 50px; height: 50px; object-fit: cover;">
+                                                            {% else %}
+                                                                <div class="rounded-circle me-3 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center border"
+                                                                     style="width: 50px; height: 50px;">
+                                                                    <i class="fas fa-user text-secondary fa-lg"></i>
+                                                                </div>
+                                                            {% endif %}
+
+                                                            <div>
+                                                                <strong class="d-block fs-6">{{ result.contestant.name }}</strong>
+                                                                <!-- Winner/Tie badges - PRESERVED -->
+                                                                {% if not position_data.is_tie and forloop.first and result.votes > 0 %}
+                                                                    <span class="badge bg-success mt-1 rounded-pill px-3">Winner</span>
+                                                                {% endif %}
+                                                                {% if position_data.is_tie and result.votes == position_data.results.0.votes %}
+                                                                    <span class="badge bg-warning text-dark mt-1 rounded-pill px-3">Tied</span>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Party - PRESERVED -->
+                                                    <td>
+                                                        <span class="badge bg-light text-secondary px-3 py-2">
+                                                            {{ result.contestant.party|default:"Independent" }}
+                                                        </span>
+                                                    </td>
+
+                                                    <!-- Votes - PRESERVED with enhancement -->
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <strong class="fs-5">{{ result.votes }}</strong>
+                                                            <small class="text-muted d-block">
+                                                                vote{{ result.votes|pluralize }}
+                                                            </small>
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Progress Bar - PRESERVED structure with enhancements -->
+                                                    <td class="pe-4">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="progress flex-grow-1" style="height: 24px;">
+                                                                <div class="progress-bar 
+                                                                    {% if position_data.is_tie and result.votes == position_data.results.0.votes %}
+                                                                        bg-warning
+                                                                    {% elif not position_data.is_tie and forloop.first and result.votes > 0 %}
+                                                                        bg-success
+                                                                    {% else %}
+                                                                        bg-primary
+                                                                    {% endif %}"
+                                                                     role="progressbar"
+                                                                     style="width: {{ result.percentage }}%;"
+                                                                     aria-valuenow="{{ result.percentage }}"
+                                                                     aria-valuemin="0"
+                                                                     aria-valuemax="100">
+                                                                    {% if result.percentage >= 15 %}
+                                                                        <span class="small fw-bold text-white">{{ result.percentage }}%</span>
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
+                                                            {% if result.percentage < 15 %}
+                                                                <span class="small fw-bold text-primary min-width-50">{{ result.percentage }}%</span>
+                                                            {% endif %}
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                {% else %}
+                                    <!-- No votes alert - PRESERVED -->
+                                    <div class="alert alert-info border-0 bg-info bg-opacity-10 p-5 text-center rounded-4">
+                                        <div class="display-1 text-info mb-3">
+                                            <i class="fas fa-info-circle"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-2">No Votes Cast</h4>
+                                        <p class="text-secondary mb-0">No votes were cast for this position.</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    {% else %}
+                        <!-- No results alert - PRESERVED -->
+                        <div class="alert alert-info border-0 bg-info bg-opacity-10 p-5 text-center rounded-4">
+                            <div class="display-1 text-info mb-3">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2">No Results Available</h4>
+                            <p class="text-secondary mb-0">No results available yet.</p>
+                        </div>
+                    {% endif %}
+
+                    <!-- Divider - PRESERVED -->
+                    <hr class="my-5 opacity-25">
+
+                    <!-- Back Button - PRESERVED with enhancement -->
+                    <div class="text-center">
+                        <a href="{% url 'home' %}" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm">
+                            <i class="fas fa-home me-2"></i> Back to Dashboard
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Share Results Section - ADDED without removing anything -->
+                    <div class="text-center mt-4">
+                        <span class="text-secondary me-3"><i class="fas fa-share-alt me-1"></i>Share results:</span>
+                        <a href="#" class="text-primary me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-primary me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-primary"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add custom CSS for enhanced styling -->
+<style>
+    .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Progress bar enhancements */
+    .progress {
+        background-color: #e9ecef;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        transition: width 1s ease-in-out;
+        border-radius: 30px;
+    }
+    
+    /* Table enhancements */
+    .table td, .table th {
+        vertical-align: middle;
+    }
+    
+    .table tbody tr:hover {
+        background-color: rgba(var(--bs-primary-rgb), 0.05) !important;
+    }
+    
+    /* Winner row highlight */
+    .table-success {
+        background-color: rgba(40, 167, 69, 0.1) !important;
+    }
+    
+    /* Tie row highlight */
+    .table-warning {
+        background-color: rgba(255, 193, 7, 0.1) !important;
+    }
+    
+    /* Badge enhancements */
+    .badge {
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        .display-1 {
+            font-size: 4rem;
+        }
+        
+        .table thead {
+            display: none;
+        }
+        
+        .table tbody tr {
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+        }
+        
+        .table tbody td {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            padding: 0.75rem;
+        }
+        
+        .table tbody td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<!-- Your original chart script is PRESERVED below -->
+<script>
+/* ========================================
+   RESULTS CHARTS - ONE PER POSITION (PRESERVED)
+   ======================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    var colors = [
+        'rgba(46, 204, 113, 0.8)',
+        'rgba(52, 152, 219, 0.8)',
+        'rgba(155, 89, 182, 0.8)',
+        'rgba(241, 196, 15, 0.8)',
+        'rgba(231, 76, 60, 0.8)',
+        'rgba(26, 188, 156, 0.8)'
+    ];
+
+    var borderColors = colors.map(function(c) {
+        return c.replace('0.8', '1');
+    });
+
+    // Find all chart data containers
+    var chartDataDivs = document.querySelectorAll('[id^="chartData-"]');
+
+    chartDataDivs.forEach(function(dataDiv) {
+        var positionId = dataDiv.id.replace('chartData-', '');
+        var ctx = document.getElementById('chart-' + positionId);
+
+        if (!ctx) return;
+
+        var resultItems = dataDiv.querySelectorAll('.result-item');
+        if (resultItems.length === 0) return;
+
+        var labels = [];
+        var votes = [];
+        var percentages = [];
+
+        resultItems.forEach(function(item) {
+            labels.push(item.getAttribute('data-name'));
+            votes.push(parseInt(item.getAttribute('data-votes')));
+            percentages.push(parseFloat(item.getAttribute('data-percentage')));
+        });
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Votes',
+                    data: votes,
+                    backgroundColor: colors.slice(0, labels.length),
+                    borderColor: borderColors.slice(0, labels.length),
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Vote Distribution',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                var idx = context.dataIndex;
+                                return 'Votes: ' + votes[idx] + ' (' + percentages[idx] + '%)';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 },
+                        title: { display: true, text: 'Number of Votes' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Contestants' }
+                    }
+                }
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

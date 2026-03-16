@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     ADMIN DASHBOARD
+     ======================================== -->
+
+<!-- Page Header -->
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4"><i class="fas fa-user-shield"></i> Admin Dashboard</h1>
+        <p class="lead">Monitor users and live election results</p>
+    </div>
+</div>
+
+<!-- ========================================
+     STATISTICS CARDS
+     ======================================== -->
+<div class="row">
+    <!-- Total Users -->
+    <div class="col-md-4">
+        <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Total Users</h6>
+                    <h3>{{ total_users }}</h3>
+                </div>
+                <i class="fas fa-users fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Voters -->
+    <div class="col-md-4">
+        <div class="stats-card stats-card-pink">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Voters</h6>
+                    <h3>{{ total_voters }}</h3>
+                </div>
+                <i class="fas fa-user-check fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Admins -->
+    <div class="col-md-4">
+        <div class="stats-card stats-card-blue">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Admins</h6>
+                    <h3>{{ total_admins }}</h3>
+                </div>
+                <i class="fas fa-user-shield fa-3x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================
+     LIVE ELECTION RESULTS
+     ======================================== -->
+<div class="row section-spacing">
+    <div class="col-12">
+        <h2 class="mb-3">
+            <i class="fas fa-chart-line"></i> Live Election Results
+        </h2>
+
+        {% if active_elections %}
+            {% for election in active_elections %}
+            <div class="card mb-4">
+                <!-- Election Header -->
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-vote-yea"></i> {{ election.title }}
+                    </h5>
+                    <small>
+                        Total Votes: <span id="total-votes-{{ election.id }}" class="fw-bold">0</span>
+                    </small>
+                </div>
+
+                <!-- Election Body -->
+                <div class="card-body">
+                    <!-- Container for position charts -->
+                    <div id="charts-container-{{ election.id }}">
+                        <div class="text-center text-muted py-3">
+                            <i class="fas fa-spinner fa-spin"></i> Loading live results...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> No active elections to monitor.
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- ========================================
+     REGISTERED USERS
+     ======================================== -->
+<div class="row section-spacing">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-users"></i> Registered Users</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Voter ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Joined</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user_obj in users %}
+                            <tr>
+                                <td><code>{{ user_obj.voter_id }}</code></td>
+                                <td>{{ user_obj.get_full_name }}</td>
+                                <td>{{ user_obj.email }}</td>
+                                <td>
+                                    {% if user_obj.is_super_admin %}
+                                        <span class="badge bg-danger">Super Admin</span>
+                                    {% elif user_obj.is_admin %}
+                                        <span class="badge bg-warning text-dark">Admin</span>
+                                    {% else %}
+                                        <span class="badge bg-primary">Voter</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ user_obj.date_joined|date:"M d, Y" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+/* ========================================
+   LIVE RESULTS MONITORING
+   ======================================== */
+
+// Store chart instances by position ID
+const chartInstances = {};
+
+// Election IDs to monitor
+const electionIds = [
+    {% for election in active_elections %}
+        {{ election.id }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+];
+
+// Function to create or update chart for a position
+function updatePositionChart(electionId, positionData) {
+    const chartId = 'chart-' + electionId + '-' + positionData.id;
+    let canvas = document.getElementById(chartId);
+    
+    // Create canvas if it doesn't exist
+    if (!canvas) {
+        const container = document.getElementById('charts-container-' + electionId);
+        container.innerHTML = ''; // Clear loading message
+        
+        // Create position section
+        const positionDiv = document.createElement('div');
+        positionDiv.className = 'mb-4';
+        positionDiv.innerHTML = `
+            <h6 class="mb-2">
+                <i class="fas fa-briefcase"></i> ${positionData.title}
+                <small class="text-muted ms-2">
+                    (${positionData.total_votes} vote${positionData.total_votes !== 1 ? 's' : ''})
+                </small>
+            </h6>
+            <canvas id="${chartId}" style="max-height: 250px;"></canvas>
+            <hr>
+        `;
+        container.appendChild(positionDiv);
+        canvas = document.getElementById(chartId);
+    }
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Prepare data
+    const labels = positionData.contestants.map(c => c.name);
+    const votes = positionData.contestants.map(c => c.votes);
+    
+    const colors = [
+        'rgba(255, 99, 132, 0.8)',
+        'rgba(54, 162, 235, 0.8)',
+        'rgba(255, 206, 86, 0.8)',
+        'rgba(75, 192, 192, 0.8)',
+        'rgba(153, 102, 255, 0.8)',
+        'rgba(255, 159, 64, 0.8)',
+    ];
+    
+    // Update or create chart
+    if (chartInstances[chartId]) {
+        chartInstances[chartId].data.labels = labels;
+        chartInstances[chartId].data.datasets[0].data = votes;
+        chartInstances[chartId].update('none'); // Update without animation for smooth refresh
+    } else {
+        chartInstances[chartId] = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Votes',
+                    data: votes,
+                    backgroundColor: colors.slice(0, labels.length),
+                    borderColor: colors.slice(0, labels.length).map(c => c.replace('0.8', '1')),
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                }
+            }
+        });
+    }
+}
+
+// Function to fetch and update live results for an election
+function fetchLiveResults(electionId) {
+    fetch('/elections/' + electionId + '/live-results/')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch results');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update total votes
+            const totalVotesSpan = document.getElementById('total-votes-' + electionId);
+            if (totalVotesSpan) {
+                totalVotesSpan.textContent = data.total_votes;
+            }
+            
+            // Update each position's chart
+            data.positions.forEach(position => {
+                updatePositionChart(electionId, position);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching results for election ' + electionId + ':', error);
+        });
+}
+
+// Initialize and start auto-refresh
+document.addEventListener('DOMContentLoaded', function() {
+    if (electionIds.length === 0) {
+        return;
+    }
+    
+    // Initial fetch for all elections
+    electionIds.forEach(id => {
+        fetchLiveResults(id);
+    });
+    
+    // Refresh every 5 seconds
+    setInterval(() => {
+        electionIds.forEach(id => {
+            fetchLiveResults(id);
+        });
+    }, 5000);
+});
+</script>
+{% endblock %}

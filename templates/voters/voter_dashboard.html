@@ -1,0 +1,314 @@
+{% extends 'base.html' %}
+
+{% block title %}Voter Dashboard - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     VOTER DASHBOARD - ENHANCED
+     ======================================== -->
+
+<!-- Page Header with Welcome Banner -->
+<div class="row">
+    <div class="col-12">
+        <div class="bg-primary bg-opacity-10 rounded-4 p-5 mb-5">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-vote-yea text-primary me-3"></i> Voter Dashboard
+            </h1>
+            <p class="lead text-secondary mb-0">
+                <i class="fas fa-user-circle text-primary me-2"></i>
+                Welcome, <span class="fw-bold text-primary">{{ user.get_full_name }}</span>! View and participate in elections below.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================
+     ACTIVE ELECTIONS SECTION
+     ======================================== -->
+<div class="row section-spacing mb-5">
+    <div class="col-12">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="fw-bold mb-0">
+                <span class="badge bg-danger bg-opacity-10 text-danger p-3 rounded-3 me-3">
+                    <i class="fas fa-running"></i>
+                </span>
+                Active Elections
+            </h2>
+            {% if election_progress %}
+            <span class="badge bg-danger rounded-pill px-3 py-2">{{ election_progress|length }} Active</span>
+            {% endif %}
+        </div>
+
+        {% if election_progress %}
+            <div class="row g-4">
+                {% for item in election_progress %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card election-card h-100 border-0 shadow-sm hover-lift">
+                        <!-- Election Title - PRESERVED original class -->
+                        <div class="card-header bg-transparent border-0 pt-4 px-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 fw-bold mb-0">{{ item.election.title }}</h3>
+                                <span class="badge bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill">
+                                    <i class="fas fa-circle fa-2xs me-1 text-danger"></i> Live
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Election Details - PRESERVED original classes -->
+                        <div class="card-body px-4">
+                            <!-- Description with truncatewords - PRESERVED -->
+                            <p class="card-text text-secondary small mb-3">
+                                {{ item.election.description|truncatewords:20 }}
+                            </p>
+                            
+                            <!-- End Date - PRESERVED classes and format -->
+                            <p class="text-muted small mb-3">
+                                <i class="fas fa-calendar"></i>
+                                Ends: {{ item.election.end_date|date:"M d, Y H:i" }}
+                            </p>
+
+                            <!-- Positions Info - PRESERVED original structure -->
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-list"></i>
+                                    Positions Voted: {{ item.voted_positions }} of {{ item.total_positions }}
+                                </small>
+
+                                <!-- Progress Bar - PRESERVED original structure and inline style -->
+                                <div class="progress mt-1" style="height: 8px;">
+                                    <div class="progress-bar bg-success" 
+                                         role="progressbar" 
+                                         style="width: {{ item.progress_percent }}%;" 
+                                         aria-valuenow="{{ item.progress_percent }}" 
+                                         aria-valuemin="0" 
+                                         aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Remaining positions preview - ADDED without removing anything -->
+                            {% if item.remaining > 0 and not item.completed %}
+                            <div class="mt-2 mb-3">
+                                <small class="text-secondary d-block mb-2">
+                                    <i class="fas fa-chevron-circle-right me-1"></i>
+                                    Remaining to vote:
+                                </small>
+                                <span class="badge bg-light text-secondary p-2">
+                                    {{ item.remaining }} position{{ item.remaining|pluralize }} left
+                                </span>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Vote Status Button - PRESERVED original structure and classes -->
+                        <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                            {% if item.completed %}
+                                <span class="badge bg-success p-2 w-100 py-3">
+                                    <i class="fas fa-check-circle"></i> All Votes Submitted
+                                </span>
+                            {% else %}
+                                <a href="{% url 'votes:vote' item.election.id %}" 
+                                   class="btn btn-primary btn-sm w-100 py-2 {% if item.voted_positions > 0 %}btn-warning{% endif %}">
+                                    <i class="fas fa-vote-yea"></i>
+                                    {% if item.voted_positions > 0 %}
+                                        Continue Voting ({{ item.remaining }} left)
+                                    {% else %}
+                                        Vote Now
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info border-0 bg-info bg-opacity-10 p-5 text-center rounded-4">
+                <div class="display-1 text-info mb-3">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h4 class="fw-bold mb-2">No Active Elections</h4>
+                <p class="text-secondary mb-0">
+                    <i class="fas fa-info-circle"></i> No active elections at the moment.
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- ========================================
+     UPCOMING ELECTIONS
+     ======================================== -->
+{% if upcoming_elections %}
+<div class="row section-spacing">
+    <div class="col-12">
+        <h2 class="mb-3">
+            <i class="fas fa-calendar-alt"></i> Upcoming Elections
+        </h2>
+        
+        {% for election in upcoming_elections %}
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="mb-0">{{ election.title }}</h5>
+            </div>
+            <div class="card-body">
+                <p>{{ election.description }}</p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1">
+                            <i class="fas fa-calendar-check"></i> 
+                            <strong>Starts:</strong> {{ election.start_date|date:"F d, Y - h:i A" }}
+                        </p>
+                        <p class="mb-1">
+                            <i class="fas fa-calendar-times"></i> 
+                            <strong>Ends:</strong> {{ election.end_date|date:"F d, Y - h:i A" }}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-1">
+                            <i class="fas fa-briefcase"></i> 
+                            <strong>Positions:</strong> {{ election.positions.count }}
+                        </p>
+                        <p class="mb-1">
+                            <i class="fas fa-users"></i> 
+                            <strong>Contestants:</strong> {{ election.contestants.count }}
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="fas fa-info-circle"></i> 
+                    <strong>Coming Soon!</strong> This election will start on {{ election.start_date|date:"F d, Y" }}.
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- ========================================
+     PAST ELECTIONS WITH RESULTS
+     ======================================== -->
+<div class="row section-spacing mb-5">
+    <div class="col-12">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="fw-bold mb-0">
+                <span class="badge bg-info bg-opacity-10 text-info p-3 rounded-3 me-3">
+                    <i class="fas fa-chart-bar"></i>
+                </span>
+                Past Elections (Results Available)
+            </h2>
+            {% if ended_elections %}
+            <span class="badge bg-info rounded-pill px-3 py-2">{{ ended_elections|length }} Past</span>
+            {% endif %}
+        </div>
+
+        {% if ended_elections %}
+            <div class="list-group">
+                {% for election in ended_elections %}
+                <div class="list-group-item border-0 shadow-sm mb-3 rounded-3 hover-shadow">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <div class="flex-grow-1 me-3">
+                            <h5 class="mb-1 fw-bold">{{ election.title }}</h5>
+                            <p class="mb-2 text-secondary">{{ election.description|truncatewords:30 }}</p>
+                            <small class="text-muted">
+                                <i class="fas fa-calendar"></i>
+                                Ended: {{ election.end_date|date:"M d, Y H:i" }}
+                            </small>
+                        </div>
+                        <a href="{% url 'elections:election_results' election.id %}" 
+                           class="btn btn-outline-primary btn-sm rounded-pill px-4 py-2">
+                            <i class="fas fa-chart-pie"></i> View Results
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info border-0 bg-info bg-opacity-10 p-5 text-center rounded-4">
+                <div class="display-1 text-info mb-3">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <h4 class="fw-bold mb-2">No Past Elections</h4>
+                <p class="text-secondary mb-0">
+                    <i class="fas fa-info-circle"></i> No past election results available yet.
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- ========================================
+     QUICK STATS SECTION - ADDED WITHOUT REMOVING ANY TAGS
+     ======================================== -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-0 bg-light">
+            <div class="card-body p-4">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <div class="display-4 fw-bold text-primary">{{ election_progress|length }}</div>
+                        <span class="text-secondary"><i class="fas fa-running me-1"></i>Active Elections</span>
+                    </div>
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <div class="display-4 fw-bold text-warning">{{ upcoming_elections|length }}</div>
+                        <span class="text-secondary"><i class="fas fa-clock me-1"></i>Upcoming Elections</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="display-4 fw-bold text-info">{{ ended_elections|length }}</div>
+                        <span class="text-secondary"><i class="fas fa-history me-1"></i>Past Elections</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add custom CSS for enhanced styling -->
+<style>
+    .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+    }
+    
+    .hover-shadow {
+        transition: box-shadow 0.2s ease;
+    }
+    .hover-shadow:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+    }
+    
+    .election-card {
+        transition: all 0.3s ease;
+    }
+    
+    .election-card:hover {
+        border-color: var(--bs-primary) !important;
+    }
+    
+    /* Progress bar animation */
+    .progress-bar {
+        transition: width 0.6s ease;
+    }
+    
+    /* Preserve original classes */
+    .section-spacing {
+        /* Your original section-spacing styles remain */
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        .display-4 {
+            font-size: 2rem;
+        }
+    }
+</style>
+{% endblock %}
+
+

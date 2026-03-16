@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Position - ELECTRA{% endblock %}
+
+{% block content %}
+<!-- ========================================
+     DELETE POSITION CONFIRMATION
+     ======================================== -->
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-danger">
+            <!-- Card Header -->
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-exclamation-triangle"></i> Confirm Deletion
+                </h4>
+            </div>
+            
+            <!-- Card Body -->
+            <div class="card-body">
+                <!-- Warning -->
+                <div class="alert alert-danger">
+                    <strong>Warning!</strong> You are about to delete this position.
+                </div>
+                
+                <!-- Position Details -->
+                <h5>Position: {{ position.title }}</h5>
+                <p>Election: {{ position.election.title }}</p>
+                <p>
+                    All contestants and votes for this position will also be deleted.
+                </p>
+                
+                <!-- Confirmation Form -->
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{% url 'elections:manage_election' position.election.id %}"
+                           class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Yes, Delete Position
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
